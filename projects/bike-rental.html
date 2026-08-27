@@ -1,1 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bike Rental Analysis | Nikhil Shah</title>
+
+    <meta name="description"
+        content="Bike Rental Demand & Usage Analysis using Python, SQL and Tableau.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Existing Portfolio CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .project-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 120px 30px 80px;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .project-header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            max-width: 850px;
+            margin: 0 auto 25px;
+            line-height: 1.8;
+        }
+
+        .project-tech {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .project-tech span {
+            padding: 7px 16px;
+            border-radius: 20px;
+            background: rgba(96, 165, 250, 0.12);
+            border: 1px solid rgba(96, 165, 250, 0.25);
+        }
+
+        .case-section {
+            margin-bottom: 60px;
+        }
+
+        .case-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .case-section h3 {
+            font-size: 21px;
+            margin: 25px 0 10px;
+        }
+
+        .case-section p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .case-section ul {
+            padding-left: 25px;
+            line-height: 1.9;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .visual-card {
+            margin: 25px 0 40px;
+            text-align: center;
+        }
+
+        .visual-card img {
+            width: 100%;
+            max-width: 950px;
+            border-radius: 12px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .visual-caption {
+            margin-top: 10px;
+            font-size: 14px;
+            opacity: 0.75;
+        }
+
+        .dashboard-image {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+            margin-top: 25px;
+        }
+
+        .recommendation-card {
+            padding: 22px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .recommendation-card h3 {
+            margin-top: 0;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+
+            .project-page {
+                padding: 100px 20px 50px;
+            }
+
+            .project-header h1 {
+                font-size: 30px;
+            }
+
+            .case-section h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Nikhil<span>.</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#certifications">Certifications</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+
+            </ul>
+
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PROJECT PAGE ================= -->
+
+    <main class="project-page">
+
+        <a href="../index.html#projects"
+            class="btn secondary back-button">
+
+            ← Back to Projects
+
+        </a>
+
+
+        <!-- PROJECT HEADER -->
+
+        <section class="project-header">
+
+            <h1>Bike Rental Demand & Usage Analysis</h1>
+
+            <p>
+                An end-to-end data analytics project analyzing
+                10,886 hourly bike rental records to understand
+                demand patterns, seasonal trends, weather effects,
+                temperature relationships and customer behavior.
+            </p>
+
+            <div class="project-tech">
+
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Tableau</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EXECUTIVE SUMMARY ================= -->
+
+        <section class="case-section">
+
+            <h2>1. Executive Summary</h2>
+
+            <p>
+                This project analyzes historical bike rental data
+                to understand the key factors influencing rental
+                demand and identify opportunities for better
+                operational planning.
+            </p>
+
+            <p>
+                The analysis found that rental demand varies
+                significantly by time of day, season, temperature,
+                weather conditions and customer type.
+            </p>
+
+            <p>
+                Two major peak-demand windows were identified:
+                <strong>7–9 AM</strong> and
+                <strong>4–7 PM</strong>.
+                Registered users form the majority of the customer
+                base, while casual users show greater sensitivity
+                to unfavorable weather conditions.
+            </p>
+
+        </section>
+
+
+        <!-- ================= OBJECTIVES ================= -->
+
+        <section class="case-section">
+
+            <h2>2. Project Objectives</h2>
+
+            <ul>
+
+                <li>Identify the hours with the highest and lowest rental demand.</li>
+
+                <li>Analyze rental demand across different seasons.</li>
+
+                <li>Understand the relationship between temperature and rental demand.</li>
+
+                <li>Analyze how weather conditions influence rental activity.</li>
+
+                <li>Compare casual and registered customer behavior.</li>
+
+                <li>Translate analytical findings into actionable business recommendations.</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- ================= DATA & METHODOLOGY ================= -->
+
+        <section class="case-section">
+
+            <h2>3. Data & Methodology</h2>
+
+            <h3>Data Used</h3>
+
+            <p>
+                The project uses a historical Bike Sharing /
+                Bike Rental dataset containing
+                <strong>10,886 hourly observations</strong>.
+            </p>
+
+            <table class="data-table">
+
+                <tr>
+                    <th>Data Area</th>
+                    <th>Variables</th>
+                </tr>
+
+                <tr>
+                    <td>Time</td>
+                    <td>datetime, date, hour, month, day</td>
+                </tr>
+
+                <tr>
+                    <td>Demand</td>
+                    <td>count</td>
+                </tr>
+
+                <tr>
+                    <td>Customer Type</td>
+                    <td>casual, registered</td>
+                </tr>
+
+                <tr>
+                    <td>Season</td>
+                    <td>season</td>
+                </tr>
+
+                <tr>
+                    <td>Weather</td>
+                    <td>weather</td>
+                </tr>
+
+                <tr>
+                    <td>Environment</td>
+                    <td>temp, humidity, windspeed</td>
+                </tr>
+
+                <tr>
+                    <td>Calendar</td>
+                    <td>workingday, holiday</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Data Preparation</h3>
+
+            <p>
+                Python was used to clean and transform the raw
+                dataset into an analysis-ready format.
+                Additional variables were created including
+                hour, season labels, weather labels, day type,
+                customer ratios and temperature buckets.
+            </p>
+
+
+            <h3>Analytical Approach</h3>
+
+            <p>
+                Python was used for data preparation and exploratory
+                analysis. SQL was used to answer business questions
+                through aggregation and conditional analysis.
+                Tableau was then used to create the final dashboard
+                and communicate the findings visually.
+            </p>
+
+            <p>
+                <strong>Workflow:</strong>
+                Raw Data → Python → SQL → Tableau → Insights → Recommendations
+            </p>
+
+        </section>
+
+
+        <!-- ================= FINDING 1 ================= -->
+
+        <section class="case-section">
+
+            <h2>4. Key Findings & Visualizations</h2>
+
+            <h3>Finding 1 — Rental Demand Peaks During Specific Hours</h3>
+
+            <p>
+                The x-axis represents the hour of the day
+                (0–23), while the y-axis represents the
+                average number of bike rentals.
+            </p>
+
+            <p>
+                Two clear peak-demand windows can be identified:
+            </p>
+
+            <ul>
+
+                <li><strong>Morning Peak → 7–9 AM</strong></li>
+
+                <li><strong>Evening Peak → 4–7 PM</strong></li>
+
+            </ul>
+
+            <p>
+                Rental activity is lowest during the late-night
+                and early-morning period.
+            </p>
+
+            <h3>Business Importance</h3>
+
+            <p>
+                <strong>Capacity Planning:</strong>
+                The business should ensure maximum bike availability
+                during the peak windows of 7–9 AM and 4–7 PM.
+            </p>
+
+            <p>
+                <strong>Maintenance Planning:</strong>
+                Suitable low-demand windows within
+                <strong>9 PM–5 AM</strong> can be used for
+                routine maintenance and servicing without
+                interfering with the main demand peaks.
+            </p>
+
+            <div class="visual-card">
+
+                <!-- INSERT YOUR DEMAND BY HOUR IMAGE HERE -->
+
+                <p class="visual-caption">
+                    Figure 1. Average Bike Rental Demand by Hour
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FINDING 2 ================= -->
+
+        <section class="case-section">
+
+            <h3>Finding 2 — Rental Demand Varies by Season</h3>
+
+            <p>
+                Fall shows the highest average rental demand,
+                followed by Summer, Winter and Spring.
+                The customer mix also changes across seasons.
+            </p>
+
+            <h3>Business Importance</h3>
+
+            <p>
+                <strong>Capacity Planning:</strong>
+                Ensure sufficient bikes and staff during
+                high-demand seasons, especially Fall and Summer.
+            </p>
+
+            <p>
+                <strong>Seasonal Promotions:</strong>
+                Offer discounts, special deals or seasonal packages
+                during lower-demand periods such as Spring to
+                encourage more rentals and improve fleet utilization.
+            </p>
+
+            <p>
+                Since the registered-customer share remains relatively
+                consistent across seasons, promotional efforts can
+                focus more heavily on casual customers.
+            </p>
+
+            <div class="visual-card">
+
+                <!-- INSERT YOUR USERS BY SEASON IMAGE HERE -->
+
+                <p class="visual-caption">
+                    Figure 2. Average Bike Rentals and User Composition by Season
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FINDING 3 ================= -->
+
+        <section class="case-section">
+
+            <h3>Finding 3 — Temperature Influences Rental Demand</h3>
+
+            <p>
+                The analysis shows a positive relationship between
+                temperature and bike rental demand, with the
+                <strong>30–40°C range</strong> showing the highest
+                observed average demand.
+            </p>
+
+            <h3>Business Importance</h3>
+
+            <p>
+                <strong>Demand Planning:</strong>
+                Temperature can be included alongside time,
+                season and weather when estimating expected demand.
+            </p>
+
+            <p>
+                <strong>Operating Decisions:</strong>
+                During favorable temperature conditions, the business
+                could adjust operating hours or increase service
+                availability to capture additional demand.
+            </p>
+
+            <p>
+                <strong>Targeted Marketing:</strong>
+                Temperature-based campaigns can promote bike rides
+                when conditions are favorable.
+            </p>
+
+            <div class="visual-card">
+
+                <!-- INSERT YOUR DEMAND VS TEMPERATURE IMAGE HERE -->
+
+                <p class="visual-caption">
+                    Figure 3. Relationship Between Temperature and Rental Demand
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FINDING 4 ================= -->
+
+        <section class="case-section">
+
+            <h3>Finding 4 — Weather Strongly Affects Casual User Participation</h3>
+
+            <p>
+                The analysis shows that the registered-user share
+                remains relatively high across all weather conditions,
+                while the casual-user share decreases as weather
+                becomes more unfavorable.
+            </p>
+
+            <p>
+                Casual users decrease from approximately
+                <strong>18% in clear weather</strong> to around
+                <strong>4% in severe weather</strong>.
+                Registered users therefore form a more stable
+                customer base across weather conditions.
+            </p>
+
+            <h3>Business Importance</h3>
+
+            <p>
+                <strong>Casual Customer Targeting:</strong>
+                Focus marketing efforts on casual users during
+                favorable weather conditions.
+            </p>
+
+            <p>
+                <strong>Weather-Based Promotions:</strong>
+                Introduce targeted offers, weekend packages or
+                seasonal promotions when weather conditions are favorable.
+            </p>
+
+            <p>
+                <strong>Registered Customer Retention:</strong>
+                Continue engagement and retention programs for
+                registered customers, who remain the core customer segment.
+            </p>
+
+            <div class="visual-card">
+
+                <!-- INSERT YOUR USER TYPE RATIO VS WEATHER IMAGE HERE -->
+
+                <p class="visual-caption">
+                    Figure 4. User Type Ratio Across Weather Conditions
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FINDING 5 ================= -->
+
+        <section class="case-section">
+
+            <h3>Finding 5 — Registered Users Dominate Overall Rentals</h3>
+
+            <p>
+                Registered users account for approximately
+                <strong>82.9%</strong> of total rentals,
+                while casual users account for approximately
+                <strong>17.1%</strong>.
+            </p>
+
+            <p>
+                This shows that registered customers form the
+                core customer base and contribute the majority
+                of rental activity.
+            </p>
+
+            <h3>Business Importance</h3>
+
+            <p>
+                <strong>Customer Retention:</strong>
+                Focus on retaining registered users through
+                membership benefits and loyalty programs.
+            </p>
+
+            <p>
+                <strong>Membership Conversion:</strong>
+                Target casual users with membership trials or
+                introductory plans to encourage conversion into
+                registered customers.
+            </p>
+
+            <p>
+                <strong>Customer Segmentation:</strong>
+                Use the different behaviors of casual and registered
+                users to develop more precise marketing strategies.
+            </p>
+
+            <div class="visual-card">
+
+                <!-- INSERT YOUR SQL SCREENSHOT HERE -->
+
+                <p class="visual-caption">
+                    Figure 5. SQL Analysis of Casual vs Registered User Contribution
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section class="case-section">
+
+            <h2>5. Tableau Dashboard</h2>
+
+            <p>
+                The final Tableau dashboard brings together the
+                project's key KPIs and visualizations into one
+                interactive business view.
+            </p>
+
+            <p>
+                It provides a consolidated view of rental demand,
+                peak periods, seasonality, temperature, weather
+                conditions and customer behavior.
+            </p>
+
+            <img
+                src="../assets/projects/bike-rental/bike-rental-dashboard.png"
+                alt="Bike Rental Dashboard"
+                class="dashboard-image">
+
+            <p class="visual-caption">
+                Figure 6. Final Tableau Dashboard — Bike Rental Demand & Usage Insights
+            </p>
+
+            <div class="action-buttons">
+
+                <a href="YOUR_TABLEAU_PUBLIC_LINK_HERE"
+                    target="_blank"
+                    class="btn primary">
+
+                    View Interactive Dashboard
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECOMMENDATIONS ================= -->
+
+        <section class="case-section">
+
+            <h2>6. Actionable Recommendations</h2>
+
+
+            <div class="recommendation-card">
+
+                <h3>1. Capacity & Maintenance Planning</h3>
+
+                <p>
+                    Maximize bike availability during the
+                    7–9 AM and 4–7 PM peak periods, while using
+                    suitable low-demand windows within 9 PM–5 AM
+                    for maintenance and servicing.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-card">
+
+                <h3>2. Seasonal Capacity & Promotions</h3>
+
+                <p>
+                    Maintain sufficient bikes and staff during
+                    Fall and Summer while using seasonal offers
+                    and packages during lower-demand periods
+                    such as Spring.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-card">
+
+                <h3>3. Temperature-Based Planning</h3>
+
+                <p>
+                    Include temperature in demand planning and
+                    consider adjusting operating hours, service
+                    availability and marketing activity during
+                    favorable temperature conditions.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-card">
+
+                <h3>4. Weather-Based Customer Strategy</h3>
+
+                <p>
+                    Focus promotions on casual customers during
+                    favorable weather conditions while maintaining
+                    retention and engagement programs for registered
+                    customers.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-card">
+
+                <h3>5. Customer Retention & Membership Conversion</h3>
+
+                <p>
+                    Strengthen loyalty programs for registered users
+                    and use membership trials or introductory plans
+                    to encourage casual users to become registered
+                    customers.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONCLUSION ================= -->
+
+        <section class="case-section">
+
+            <h2>7. Conclusion</h2>
+
+            <p>
+                The analysis shows that bike rental demand is
+                strongly influenced by <strong>time of day,
+                season, temperature, weather and customer type</strong>.
+            </p>
+
+            <p>
+                The hourly analysis identified clear morning and
+                evening peak periods, creating opportunities for
+                better capacity planning, while low-demand hours
+                can be used for maintenance activities.
+                Seasonal analysis showed higher demand during
+                Fall and Summer, while lower-demand periods such
+                as Spring provide opportunities for seasonal promotions.
+            </p>
+
+            <p>
+                Temperature and weather patterns can be incorporated
+                into demand planning and operating decisions.
+                The weather analysis also showed that casual customers
+                are more sensitive to unfavorable weather, while
+                registered customers remain the core and more stable
+                customer segment.
+            </p>
+
+            <p>
+                Overall, the project converts historical bike rental
+                data into practical business insights and actionable
+                recommendations covering <strong>capacity planning,
+                maintenance planning, seasonal and weather-based
+                marketing, operating decisions, customer retention
+                and membership conversion</strong>.
+            </p>
+
+        </section>
+
+
+        <!-- ================= PROJECT FILES ================= -->
+
+        <section class="case-section">
+
+            <h2>Project Files</h2>
+
+            <div class="action-buttons">
+
+                <a href="../assets/projects/bike-rental/bike-rental-final-report.pdf"
+                    target="_blank"
+                    class="btn primary">
+
+                    Final Report
+
+                </a>
+
+                <a href="../assets/projects/bike-rental/bike-rental-analysis.ipynb"
+                    target="_blank"
+                    class="btn secondary">
+
+                    Python Analysis
+
+                </a>
+
+                <a href="../assets/projects/bike-rental/bike-rental-analysis.sql"
+                    target="_blank"
+                    class="btn secondary">
+
+                    SQL Analysis
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>Nikhil Ashish Shah</h3>
+
+        <p>
+            Data Analytics • Python • SQL • Machine Learning
+        </p>
+
+        <p>
+            © 2026 All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
