@@ -5,12 +5,8 @@
 const typingText = document.getElementById("typing");
 
 const words = [
-    "Data Analyst",
-    "Python Developer",
-    "SQL Enthusiast",
-    "Machine Learning Learner",
-    "Power BI Explorer"
-];
+    "Data Professional",
+              ];
 
 let wordIndex = 0;
 let charIndex = 0;
