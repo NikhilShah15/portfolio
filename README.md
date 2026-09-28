@@ -78,3 +78,14 @@ An end-to-end data analysis project focused on understanding bike rental demand 
 **LinkedIn:** [Nikhil Shah](https://www.linkedin.com/in/nikhil-shah-b6908825a/)
 
 **Email:** shah1534nikhil@gmail.com
+
+
+## 🛒 Olist Brazilian E-Commerce Analytics
+
+**Tools:** Python | SQL | Power BI
+
+End-to-end analysis of the public Olist Brazilian E-Commerce dataset covering category performance, state-level sales, delivery experience, customer ordering behaviour, sales trends and payments.
+
+📊 [View Project Case Study](projects/olist.html)
+
+📁 [Complete Project Files](https://github.com/NikhilShah15/nikhil-portfolio/tree/main/assets/projects/olist)
