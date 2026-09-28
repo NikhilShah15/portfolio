@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Olist E-Commerce Analytics | Nikhil Shah</title>
+
+    <meta name="description"
+        content="Olist Brazilian E-Commerce Analytics using Python, SQL and Power BI.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Existing Portfolio CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .project-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 120px 30px 80px;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .project-header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            max-width: 850px;
+            margin: 0 auto 25px;
+            line-height: 1.8;
+        }
+
+        .project-tech {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .project-tech span {
+            padding: 7px 16px;
+            border-radius: 20px;
+            background: rgba(96, 165, 250, 0.12);
+            border: 1px solid rgba(96, 165, 250, 0.25);
+        }
+
+        .case-section {
+            margin-bottom: 60px;
+        }
+
+        .case-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .case-section h3 {
+            font-size: 21px;
+            margin: 25px 0 10px;
+        }
+
+        .case-section p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .case-section ul {
+            padding-left: 25px;
+            line-height: 1.9;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .visual-card {
+            margin: 25px 0 40px;
+            text-align: center;
+        }
+
+        .visual-card img {
+            width: 100%;
+            max-width: 950px;
+            border-radius: 12px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .visual-caption {
+            margin-top: 10px;
+            font-size: 14px;
+            opacity: 0.75;
+        }
+
+        .dashboard-image {
+            width: 100%;
+            max-width: 1100px;
+            border-radius: 12px;
+            display: block;
+            margin: 25px auto 0;
+        }
+
+        .recommendation-card {
+            padding: 22px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .recommendation-card h3 {
+            margin-top: 0;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .finding-image {
+            width: 100%;
+            max-width: 950px;
+            border-radius: 12px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+
+            .project-page {
+                padding: 100px 20px 50px;
+            }
+
+            .project-header h1 {
+                font-size: 30px;
+            }
+
+            .case-section h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Nikhil<span>.</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#certifications">Certifications</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+
+            </ul>
+
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PROJECT PAGE ================= -->
+
+    <main class="project-page">
+
+        <a href="../index.html#projects"
+            class="btn secondary back-button">
+
+            ← Back to Projects
+
+        </a>
+
+
+        <!-- ================= PROJECT HEADER ================= -->
+
+        <section class="project-header">
+
+            <h1>Olist Brazilian E-Commerce Analytics</h1>
+
+            <p>
+                An end-to-end e-commerce data analytics project analyzing
+                Brazilian marketplace data to understand sales performance,
+                customer behavior, delivery performance, product categories,
+                reviews and business trends.
+            </p>
+
+            <div class="project-tech">
+
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Power BI</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EXECUTIVE SUMMARY ================= -->
+
+        <section class="case-section">
+
+            <h2>1. Executive Summary</h2>
+
+            <p>
+                This project analyzes the Olist Brazilian E-Commerce dataset
+                to understand overall marketplace performance and identify
+                factors affecting sales, customer experience and operational
+                performance.
+            </p>
+
+            <p>
+                The analysis combines Python for data cleaning and exploratory
+                analysis, SQL for business-focused analysis and Power BI for
+                interactive visualization and dashboard development.
+            </p>
+
+            <p>
+                The analysis covers approximately
+                <strong>99,441 orders</strong> and examines sales,
+                customers, products, delivery performance, reviews,
+                payments and order trends.
+            </p>
+
+            <p>
+                Total merchandise sales analyzed were approximately
+                <strong>₹13.59M</strong>, with strong contributions from
+                categories such as Health & Beauty, Watches & Gifts and
+                Bed Bath & Table.
+            </p>
+
+        </section>
+
+
+        <!-- ================= OBJECTIVES ================= -->
+
+        <section class="case-section">
+
+            <h2>2. Project Objectives</h2>
+
+            <ul>
+
+                <li>
+                    Analyze overall sales and order performance.
+                </li>
+
+                <li>
+                    Identify the top-performing product categories.
+                </li>
+
+                <li>
+                    Understand customer and repeat-order behavior.
+                </li>
+
+                <li>
+                    Compare sales performance across Brazilian states.
+                </li>
+
+                <li>
+                    Analyze the relationship between delivery time and
+                    customer review scores.
+                </li>
+
+                <li>
+                    Identify sales and order trends over time.
+                </li>
+
+                <li>
+                    Analyze payment and customer behavior patterns.
+                </li>
+
+                <li>
+                    Translate analytical findings into actionable
+                    business recommendations.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- ================= DATA & METHODOLOGY ================= -->
+
+        <section class="case-section">
+
+            <h2>3. Data & Methodology</h2>
+
+            <h3>Data Used</h3>
+
+            <p>
+                The project uses multiple datasets from the Olist Brazilian
+                E-Commerce marketplace covering orders, customers, products,
+                order items, payments, reviews and product categories.
+            </p>
+
+            <table class="data-table">
+
+                <tr>
+                    <th>Dataset</th>
+                    <th>Records</th>
+                    <th>Purpose</th>
+                </tr>
+
+                <tr>
+                    <td>Orders</td>
+                    <td>99,441</td>
+                    <td>Order status, purchase and delivery analysis</td>
+                </tr>
+
+                <tr>
+                    <td>Order Items</td>
+                    <td>112,652</td>
+                    <td>Product sales and item-level analysis</td>
+                </tr>
+
+                <tr>
+                    <td>Customers</td>
+                    <td>99,443</td>
+                    <td>Customer and geographic analysis</td>
+                </tr>
+
+                <tr>
+                    <td>Products</td>
+                    <td>31,953</td>
+                    <td>Product and category analysis</td>
+                </tr>
+
+                <tr>
+                    <td>Category Translation</td>
+                    <td>72</td>
+                    <td>English product category names</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Data Preparation</h3>
+
+            <p>
+                Python was used to clean and prepare the datasets for
+                analysis. Date columns were converted into datetime format,
+                datasets were merged using relevant keys and additional
+                analytical variables were created.
+            </p>
+
+            <p>
+                Delivery time was calculated using the difference between
+                the order purchase timestamp and the customer delivery
+                timestamp.
+            </p>
+
+            <p>
+                The delivery analysis showed a median delivery time of
+                <strong>10.22 days</strong> and an average delivery time
+                of approximately <strong>12.56 days</strong>.
+            </p>
+
+
+            <h3>Analytical Approach</h3>
+
+            <p>
+                Python was used for data cleaning, transformation,
+                exploratory analysis and statistical investigation.
+                SQL was used to answer business questions using joins,
+                aggregation, filtering and conditional analysis.
+                Power BI was then used to communicate the final insights
+                through an interactive business dashboard.
+            </p>
+
+            <p>
+                <strong>Workflow:</strong>
+                Raw Data → Python → SQL → Power BI → Insights →
+                Recommendations
+            </p>
+
+        </section>
+
+
+        <!-- ================= KEY FINDINGS ================= -->
+
+        <section class="case-section">
+
+            <h2>4. Key Findings & Visualizations</h2>
+
+
+            <!-- FINDING 1 -->
+
+            <h3>
+                Finding 1 — Product Categories Drive Different Levels of Sales
+            </h3>
+
+            <p>
+                Category-level analysis shows significant differences in
+                sales contribution across the marketplace.
+            </p>
+
+            <p>
+                Among the strongest-performing categories were
+                <strong>Health & Beauty</strong>,
+                <strong>Watches & Gifts</strong> and
+                <strong>Bed Bath & Table</strong>.
+            </p>
+
+            <p>
+                Health & Beauty generated approximately
+                <strong>₹1.26M</strong> in merchandise sales, followed by
+                Watches & Gifts at approximately <strong>₹1.21M</strong>
+                and Bed Bath & Table at approximately
+                <strong>₹1.04M</strong>.
+            </p>
+
+            <div class="visual-card">
+
+                <img
+                    src="../assets/projects/olist/Visuals/page-1.png"
+                    alt="Olist Product Category Analysis"
+                    class="finding-image">
+
+                <p class="visual-caption">
+                    Figure 1. Olist Product Category Sales Analysis
+                </p>
+
+            </div>
+
+
+            <!-- FINDING 2 -->
+
+            <h3>
+                Finding 2 — Sales Performance Varies Across Brazilian States
+            </h3>
+
+            <p>
+                Geographic analysis shows that sales are concentrated in
+                certain Brazilian states.
+            </p>
+
+            <p>
+                <strong>São Paulo</strong> recorded approximately
+                <strong>₹5.20M</strong> in sales, making it a major
+                contributor to overall marketplace revenue.
+            </p>
+
+            <p>
+                Comparing states using both total sales and average
+                sales per order provides a more complete view of
+                geographic performance.
+            </p>
+
+            <div class="visual-card">
+
+                <img
+                    src="../assets/projects/olist/Visuals/page-2.png"
+                    alt="Olist State Sales Analysis"
+                    class="finding-image">
+
+                <p class="visual-caption">
+                    Figure 2. Sales Performance Across Brazilian States
+                </p>
+
+            </div>
+
+
+            <!-- FINDING 3 -->
+
+            <h3>
+                Finding 3 — Longer Delivery Times Are Associated With Lower Reviews
+            </h3>
+
+            <p>
+                Delivery performance has a clear relationship with
+                customer satisfaction.
+            </p>
+
+            <p>
+                Average review scores decline as delivery time increases.
+                The average review score falls from approximately
+                <strong>4.45</strong> for orders delivered within
+                0–5 days to approximately <strong>3.35</strong> for
+                orders taking 25–29.145 days.
+            </p>
+
+            <p>
+                This indicates that longer delivery times represent an
+                important area for operational improvement and customer
+                experience management.
+            </p>
+
+            <div class="visual-card">
+
+                <img
+                    src="../assets/projects/olist/Visuals/page-3.png"
+                    alt="Olist Delivery Time and Review Analysis"
+                    class="finding-image">
+
+                <p class="visual-caption">
+                    Figure 3. Relationship Between Delivery Time and Review Scores
+                </p>
+
+            </div>
+
+
+            <!-- FINDING 4 -->
+
+            <h3>
+                Finding 4 — Repeat Customer Activity Increased Over Time
+            </h3>
+
+            <p>
+                The analysis of customer ordering behavior shows growth
+                in repeat-order activity over the observed period.
+            </p>
+
+            <p>
+                Repeat orders increased from approximately
+                <strong>36 in January 2017</strong> to
+                <strong>277 in February 2018</strong>.
+            </p>
+
+            <p>
+                This trend provides an opportunity to examine customer
+                retention, repeat purchasing patterns and cohort behavior
+                more closely.
+            </p>
+
+            <div class="visual-card">
+
+                <img
+                    src="../assets/projects/olist/Visuals/page-4.png"
+                    alt="Olist Repeat Customer Analysis"
+                    class="finding-image">
+
+                <p class="visual-caption">
+                    Figure 4. Repeat Customer and Order Trend Analysis
+                </p>
+
+            </div>
+
+
+            <!-- FINDING 5 -->
+
+            <h3>
+                Finding 5 — Sales and Order Volume Do Not Always Move Together
+            </h3>
+
+            <p>
+                Monthly analysis shows that sales value and order volume
+                do not always change at the same rate.
+            </p>
+
+            <p>
+                This highlights the importance of monitoring multiple
+                business metrics together rather than evaluating
+                performance using sales or order count alone.
+            </p>
+
+            <p>
+                Average order value and item-level performance can provide
+                additional context when investigating changes in overall
+                revenue.
+            </p>
+
+            <div class="visual-card">
+
+                <img
+                    src="../assets/projects/olist/Visuals/page-5.png"
+                    alt="Olist Sales and Order Trend Analysis"
+                    class="finding-image">
+
+                <p class="visual-caption">
+                    Figure 5. Sales, Orders and Business Performance Trends
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section class="case-section">
+
+            <h2>5. Power BI Dashboard</h2>
+
+            <p>
+                The final Power BI dashboard brings together the project's
+                key business metrics and analytical findings into an
+                interactive reporting view.
+            </p>
+
+            <p>
+                The dashboard can be used to monitor sales performance,
+                order activity, customer behavior, product categories,
+                delivery performance and review-related insights.
+            </p>
+
+            <div class="action-buttons">
+
+                <a
+                    href="https://drive.google.com/file/d/1MKdVmuZ5XEdy-tEu9iVuPNwPeUfFf9N1/view?usp=sharing"
+                    target="_blank"
+                    class="btn primary">
+
+                    View Power BI Dashboard
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECOMMENDATIONS ================= -->
+
+        <section class="case-section">
+
+            <h2>6. Actionable Recommendations</h2>
+
+
+            <div class="recommendation-card">
+
+                <h3>1. Monitor Category Performance</h3>
+
+                <p>
+                    Track category performance using total sales,
+                    item volume and average item value together to
+                    identify categories that are contributing the most
+                    to overall marketplace performance.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-card">
+
+                <h3>2. Investigate Long Delivery Times</h3>
+
+                <p>
+                    Orders with extended delivery times should be
+                    monitored closely because longer delivery periods
+                    are associated with lower customer review scores.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-card">
+
+                <h3>3. Evaluate Geographic Performance</h3>
+
+                <p>
+                    Analyze states using both total sales and
+                    average sales per order to distinguish between
+                    high-volume markets and markets with higher
+                    order value.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-card">
+
+                <h3>4. Monitor Sales, Orders and Average Order Value Together</h3>
+
+                <p>
+                    Monthly business performance should be evaluated
+                    using sales, order volume and average order value
+                    together to better understand changes in marketplace
+                    performance.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-card">
+
+                <h3>5. Strengthen Customer Retention Analysis</h3>
+
+                <p>
+                    Growing repeat-order activity provides an opportunity
+                    to use cohort and retention analysis to understand
+                    customer purchasing behavior and identify opportunities
+                    to increase repeat purchases.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-card">
+
+                <h3>6. Monitor Customer Experience</h3>
+
+                <p>
+                    Delivery performance and review scores should be
+                    monitored together so that operational issues affecting
+                    customer satisfaction can be identified earlier.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONCLUSION ================= -->
+
+        <section class="case-section">
+
+            <h2>7. Conclusion</h2>
+
+            <p>
+                The Olist analysis provides a detailed view of Brazilian
+                e-commerce marketplace performance across sales, products,
+                customers, geography, delivery and reviews.
+            </p>
+
+            <p>
+                The analysis identified strong category and geographic
+                differences, with Health & Beauty, Watches & Gifts and
+                Bed Bath & Table among the major sales contributors and
+                São Paulo representing a major geographic market.
+            </p>
+
+            <p>
+                Delivery performance also emerged as an important customer
+                experience factor, with average review scores decreasing
+                as delivery time increased.
+            </p>
+
+            <p>
+                The growth in repeat-order activity highlights the
+                importance of customer retention and cohort analysis,
+                while differences between sales and order trends show
+                why multiple KPIs should be monitored together.
+            </p>
+
+            <p>
+                Overall, the project converts raw e-commerce data into
+                practical business insights that can support decisions
+                around <strong>product performance, geographic markets,
+                delivery operations, customer experience and retention</strong>.
+            </p>
+
+        </section>
+
+
+        <!-- ================= PROJECT FILES ================= -->
+
+        <section class="case-section">
+
+            <h2>Project Files</h2>
+
+            <div class="action-buttons">
+
+                <!-- Business Report -->
+
+                <a
+                    href="https://github.com/NikhilShah15/nikhil-portfolio/blob/main/assets/projects/olist/Reports/Olist_Ecommerce_Analysis_Report.pdf"
+                    target="_blank"
+                    class="btn primary">
+
+                    Business Report
+
+                </a>
+
+
+                <!-- Python Analysis -->
+
+                <a
+                    href="https://github.com/NikhilShah15/nikhil-portfolio/blob/main/assets/projects/olist/Python/Olist_Ecommerce_Analysis.ipynb"
+                    target="_blank"
+                    class="btn secondary">
+
+                    Python Analysis
+
+                </a>
+
+
+                <!-- SQL Analysis -->
+
+                <a
+                    href="https://github.com/NikhilShah15/nikhil-portfolio/blob/main/assets/projects/olist/SQL/Olist_Ecommerce_Analysis.sql"
+                    target="_blank"
+                    class="btn secondary">
+
+                    SQL Analysis
+
+                </a>
+
+
+                <!-- Power BI Dashboard -->
+
+                <a
+                    href="https://drive.google.com/file/d/1MKdVmuZ5XEdy-tEu9iVuPNwPeUfFf9N1/view?usp=sharing"
+                    target="_blank"
+                    class="btn secondary">
+
+                    Power BI Dashboard
+
+                </a>
+
+
+                <!-- GitHub -->
+
+                <a
+                    href="https://github.com/NikhilShah15/nikhil-portfolio/tree/main/assets/projects/olist"
+                    target="_blank"
+                    class="btn secondary">
+
+                    GitHub Project
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>Nikhil Ashish Shah</h3>
+
+        <p>
+            Data Analytics • Python • SQL • Power BI
+        </p>
+
+        <p>
+            © 2026 All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
