@@ -6,6 +6,15 @@ This repository contains my projects in **Data Analytics, Python, SQL, Machine L
 
 ## Featured Projects
 
+## Project Order
+
+1. O-list
+2. Bike Rental
+3. Netflix
+4. Ideafy
+5. Brain Tumor
+6. E-commerce Store
+
 ### 🚲 Bike Rental Demand & Usage Analysis
 
 An end-to-end data analysis project focused on understanding bike rental demand and customer behavior.
@@ -80,12 +89,3 @@ An end-to-end data analysis project focused on understanding bike rental demand 
 **Email:** shah1534nikhil@gmail.com
 
 
-## 🛒 Olist Brazilian E-Commerce Analytics
-
-**Tools:** Python | SQL | Power BI
-
-End-to-end analysis of the public Olist Brazilian E-Commerce dataset covering category performance, state-level sales, delivery experience, customer ordering behaviour, sales trends and payments.
-
-📊 [View Project Case Study](projects/olist.html)
-
-📁 [Complete Project Files](https://github.com/NikhilShah15/nikhil-portfolio/tree/main/assets/projects/olist)
