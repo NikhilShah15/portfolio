@@ -18,45 +18,13 @@
     <link rel="stylesheet" href="../style.css">
 
     <style>
-        .project-page {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 120px 30px 80px;
-        }
-
-        .back-button {
-            display: inline-block;
-            margin-bottom: 30px;
-        }
-
-        .project-header {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .project-header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .project-header p {
-            max-width: 850px;
-            margin: 0 auto 25px;
-            line-height: 1.8;
-        }
-
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin: 30px 0 50px;
-        }
-
-        .report {
-            width: 100%;
-        }
-
+        .project-page { max-width: 1100px; margin: 0 auto; padding: 120px 30px 80px; }
+        .back-button { display: inline-block; margin-bottom: 30px; }
+        .project-header { text-align: center; margin-bottom: 45px; }
+        .project-header h1 { font-size: 42px; margin-bottom: 10px; }
+        .project-header p { max-width: 850px; margin: 0 auto 25px; line-height: 1.8; }
+        .action-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 30px 0 50px; }
+        .report { width: 100%; }
         .report-page {
             margin: 0 auto 28px;
             padding: 38px 42px;
@@ -65,9 +33,7 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             overflow: hidden;
         }
-
         .report-text {
-            white-space: pre-wrap;
             overflow-wrap: anywhere;
             word-break: normal;
             font-family: 'Poppins', sans-serif;
@@ -75,43 +41,30 @@
             line-height: 1.85;
             color: inherit;
         }
-
-        .report-visual {
-            margin: 30px auto;
-            text-align: center;
-        }
-
-        .report-visual img {
-            width: 100%;
-            max-width: 950px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 12px;
-        }
-
-        .bottom-buttons {
-            margin-top: 45px;
-            margin-bottom: 20px;
-        }
+        .report-text > :first-child { margin-top: 0; }
+        .report-text h2 { font-size: 28px; font-weight: 700; margin: 0 0 18px; line-height: 1.3; }
+        .report-text h3 { font-size: 21px; font-weight: 600; margin: 28px 0 10px; line-height: 1.4; }
+        .report-text h4 { font-size: 17px; font-weight: 600; margin: 22px 0 8px; }
+        .report-text p { margin: 0 0 14px; }
+        .report-text ul, .report-text ol { margin: 0 0 16px; padding-left: 26px; }
+        .report-text li { margin-bottom: 6px; }
+        .report-text strong { font-weight: 600; }
+        .report-text .q { font-size: 18px; font-weight: 600; }
+        .report-text .rt1 { font-size: 30px; font-weight: 800; text-align: center; margin: 0 0 8px; line-height: 1.3; }
+        .report-text .rt2 { font-size: 18px; text-align: center; margin: 0 0 6px; }
+        .report-text .rt3 { text-align: center; margin: 0 0 10px; }
+        .report-visual { margin: 30px auto; text-align: center; }
+        .report-visual img { width: 100%; max-width: 950px; height: auto; display: block; margin: 0 auto; border-radius: 12px; }
+        .bottom-buttons { margin-top: 45px; margin-bottom: 20px; }
 
         @media (max-width: 768px) {
-            .project-page {
-                padding: 100px 20px 50px;
-            }
-
-            .project-header h1 {
-                font-size: 30px;
-            }
-
-            .report-page {
-                padding: 25px 20px;
-            }
-
-            .report-text {
-                font-size: 14px;
-                line-height: 1.75;
-            }
+            .project-page { padding: 100px 20px 50px; }
+            .project-header h1 { font-size: 30px; }
+            .report-page { padding: 25px 20px; }
+            .report-text { font-size: 14px; line-height: 1.75; }
+            .report-text h2 { font-size: 23px; }
+            .report-text h3 { font-size: 18px; }
+            .report-text .rt1 { font-size: 24px; }
         }
     </style>
 </head>
@@ -196,659 +149,288 @@
         <section class="report">
 
             <div class="report-page">
-                <div class="report-text">OLIST BRAZILIAN E-COMMERCE ANALYTICS
-Customer, Sales &amp; Operational Performance ​
-Prepared by Nikhil Shah
-
-
-
-1. Executive Summary
-Business Context
-
-Olist operates an e-commerce marketplace where business performance depends on product demand,
-customer purchasing behavior, geographic markets and the delivery experience.
-
-The purpose of this analysis is to identify the major patterns affecting commercial performance and
-customer experience and translate them into decisions that can improve how the marketplace is
-monitored and managed.
-
-What the Analysis Found
-
-The analysis identified five major themes.
-
-Category performance is driven by different sales mechanisms.​
- Health &amp; Beauty generated approximately ₹1.26M in merchandise sales, while Watches &amp; Gifts
-generated approximately ₹1.21M. However, the categories achieve similar sales through different
-combinations of item volume and item value. This means category performance should not be evaluated
-through sales alone.
-
-Delivery experience is closely associated with customer feedback.​
-Average review scores decline from 4.45 for deliveries completed within 0–5 days to 3.35 for deliveries
-between 25–29.145 days. The pattern remains negative after extreme delivery observations are
-excluded. Long-delivery segments therefore represent an important area for operational investigation.
-
-The largest sales market is not necessarily the highest-value market per order.​
- São Paulo generates approximately ₹5.20M in sales and has the largest order base, while states such
-as Bahia record higher average sales per order. Geographic decisions therefore require both market
-scale and order-value perspectives.
-
-Sales growth cannot be understood from order volume alone.​
- There are periods where sales increase despite fewer orders and periods where orders increase while
-sales decline. Average order value therefore provides important context for understanding changes in
-revenue.</div>
+                <div class="report-text">
+<p class="rt1">OLIST BRAZILIAN E-COMMERCE ANALYTICS</p>
+<p class="rt2">Customer, Sales &amp; Operational Performance</p>
+<p class="rt3">Prepared by Nikhil Shah</p>
+<h2>1. Executive Summary</h2>
+<h3>Business Context</h3>
+<p>Olist operates an e-commerce marketplace where business performance depends on product demand, customer purchasing behavior, geographic markets and the delivery experience.</p>
+<p>The purpose of this analysis is to identify the major patterns affecting commercial performance and customer experience and translate them into decisions that can improve how the marketplace is monitored and managed.</p>
+<h3>What the Analysis Found</h3>
+<p>The analysis identified five major themes.</p>
+<p><strong>Category performance is driven by different sales mechanisms.</strong></p>
+<p>Health &amp; Beauty generated approximately ₹1.26M in merchandise sales, while Watches &amp; Gifts generated approximately ₹1.21M. However, the categories achieve similar sales through different combinations of item volume and item value. This means category performance should not be evaluated through sales alone.</p>
+<p><strong>Delivery experience is closely associated with customer feedback.</strong></p>
+<p>Average review scores decline from 4.45 for deliveries completed within 0–5 days to 3.35 for deliveries between 25–29.145 days. The pattern remains negative after extreme delivery observations are excluded. Long-delivery segments therefore represent an important area for operational investigation.</p>
+<p><strong>The largest sales market is not necessarily the highest-value market per order.</strong></p>
+<p>São Paulo generates approximately ₹5.20M in sales and has the largest order base, while states such as Bahia record higher average sales per order. Geographic decisions therefore require both market scale and order-value perspectives.</p>
+<p><strong>Sales growth cannot be understood from order volume alone.</strong></p>
+<p>There are periods where sales increase despite fewer orders and periods where orders increase while sales decline. Average order value therefore provides important context for understanding changes in revenue.</p>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">Repeated purchasing is increasing, but repeat orders should not automatically be interpreted as
-retention.​
- Repeated-order volume rises substantially across the observed period. This creates a clear opportunity
-to develop more formal cohort-based retention measurement.
-
-Recommended Business Actions
-
-   1.​ Monitor category performance using sales, item volume and average item value together.
-   2.​ Investigate the operational drivers of long delivery times.
-   3.​ Evaluate states using both total sales and average sales per order.
-   4.​ Monitor sales, order volume and average order value together.
-   5.​ Develop cohort-based retention metrics to measure repeat customer behavior more rigorously.</div>
+                <div class="report-text">
+<p><strong>Repeated purchasing is increasing, but repeat orders should not automatically be interpreted as retention.</strong></p>
+<p>Repeated-order volume rises substantially across the observed period. This creates a clear opportunity to develop more formal cohort-based retention measurement.</p>
+<h3>Recommended Business Actions</h3>
+<ol><li>Monitor category performance using sales, item volume and average item value together.</li><li>Investigate the operational drivers of long delivery times.</li><li>Evaluate states using both total sales and average sales per order.</li><li>Monitor sales, order volume and average order value together.</li><li>Develop cohort-based retention metrics to measure repeat customer behavior more rigorously.</li></ol>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">2. Business Objective
-The analysis was undertaken to answer six business questions:
-
-   1.​ Which product categories are performing best?
-   2.​ Which states show the strongest sales performance?
-   3.​ Does delivery time relate to customer review scores?
-   4.​ How are sales changing over time?
-   5.​ How are new and repeated orders changing?
-   6.​ What factors are associated with changes in sales and order volume?
-
-These questions form the complete analytical backbone of the project.</div>
+                <div class="report-text">
+<h2>2. Business Objective</h2>
+<p>The analysis was undertaken to answer six business questions:</p>
+<ol><li>Which product categories are performing best?</li><li>Which states show the strongest sales performance?</li><li>Does delivery time relate to customer review scores?</li><li>How are sales changing over time?</li><li>How are new and repeated orders changing?</li><li>What factors are associated with changes in sales and order volume?</li></ol>
+<p>These questions form the complete analytical backbone of the project.</p>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">3. Business Questions
-
-
-Question 1
-
- Which product categories are performing best?
-Problem
-
-The business needs to understand which product categories contribute most to sales and whether strong
-performance is driven by high purchase volume, higher product value, or both. This is important
-because inventory and promotional decisions should reflect how each category actually generates
-revenue.
-
-Answer
-
-Health &amp; Beauty is the highest-performing category by total sales, generating approximately
-₹1.26M. It is followed by Watches &amp; Gifts at ₹1.21M and Bed Bath &amp; Table at ₹1.04M.
-
-The complete dataset generated approximately ₹13.59M in merchandise sales, so Health &amp; Beauty
-alone contributed about 9.3% of total sales, while Watches &amp; Gifts contributed about 8.9%.
-
-However, the sales leaders are not performing in the same way. Bed Bath &amp; Table sold the highest
-number of items at 11,115, while Watches &amp; Gifts sold 5,991 items but had an average item price of
-approximately ₹201, compared with about ₹93 for Bed Bath &amp; Table.
-
-Analysis
-
-Category performance was analyzed using total sales, items sold, average item price, and average sales
-per order.
-
-Health &amp; Beauty generated ₹1.26M from 9,670 items, making it the largest contributor to category sales.
-
-Watches &amp; Gifts generated ₹1.21M from 5,991 items. Although it sold about 3,679 fewer items than
-Health &amp; Beauty, its higher item value allowed it to generate almost the same level of sales.
-
-Bed Bath &amp; Table generated ₹1.04M, but achieved this through the highest item volume of 11,115 items.
-Its average item price was approximately ₹93, substantially lower than Watches &amp; Gifts.
-
-This demonstrates that category performance is driven by different combinations of volume and value
-rather than one common factor.</div>
+                <div class="report-text">
+<h2>3. Business Questions</h2>
+<h3>Question 1</h3>
+<p class="q">Which product categories are performing best?</p>
+<h4>Problem</h4>
+<p>The business needs to understand which product categories contribute most to sales and whether strong performance is driven by high purchase volume, higher product value, or both. This is important because inventory and promotional decisions should reflect how each category actually generates revenue.</p>
+<h4>Answer</h4>
+<p>Health &amp; Beauty is the highest-performing category by total sales, generating approximately ₹1.26M. It is followed by Watches &amp; Gifts at ₹1.21M and Bed Bath &amp; Table at ₹1.04M.</p>
+<p>The complete dataset generated approximately ₹13.59M in merchandise sales, so Health &amp; Beauty alone contributed about 9.3% of total sales, while Watches &amp; Gifts contributed about 8.9%.</p>
+<p>However, the sales leaders are not performing in the same way. Bed Bath &amp; Table sold the highest number of items at 11,115, while Watches &amp; Gifts sold 5,991 items but had an average item price of approximately ₹201, compared with about ₹93 for Bed Bath &amp; Table.</p>
+<h4>Analysis</h4>
+<p>Category performance was analyzed using total sales, items sold, average item price, and average sales per order.</p>
+<p>Health &amp; Beauty generated ₹1.26M from 9,670 items, making it the largest contributor to category sales.</p>
+<p>Watches &amp; Gifts generated ₹1.21M from 5,991 items. Although it sold about 3,679 fewer items than Health &amp; Beauty, its higher item value allowed it to generate almost the same level of sales.</p>
+<p>Bed Bath &amp; Table generated ₹1.04M, but achieved this through the highest item volume of 11,115 items. Its average item price was approximately ₹93, substantially lower than Watches &amp; Gifts.</p>
+<p>This demonstrates that category performance is driven by different combinations of volume and value rather than one common factor.</p>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">Insight
-
-Observation: Health &amp; Beauty generated the highest sales at ₹1.26M, while Bed Bath &amp; Table
-generated the highest item volume at 11,115 and Watches &amp; Gifts generated ₹1.21M despite selling only
-5,991 items.
-
-Reason: Health &amp; Beauty combines strong demand with meaningful item value, Bed Bath &amp; Table relies
-more heavily on sales volume, while Watches &amp; Gifts generates substantial revenue from higher-value
-products.
-
-Impact: Managing all three categories using the same inventory or promotional strategy could miss the
-reason each category is contributing strongly to revenue.
-
-Recommendation
-
-    ●​ Prioritize inventory availability for Health &amp; Beauty, because its ₹1.26M contribution makes it
-       the largest category-level revenue source.
-    ●​ For Bed Bath &amp; Table, identify the highest-selling products within the 11,115 items sold and
-       prioritize their stock availability, because the category&#x27;s performance is strongly volume-driven.
-    ●​ For Watches &amp; Gifts, identify the products responsible for the category&#x27;s higher item value and
-       prioritize their availability and relevant promotions, rather than focusing only on increasing unit
-       volume.
-    ●​ Use the top-selling SKUs within each major category as the operational inventory and
-       promotion list instead of applying one strategy to the entire category.
-
-
-
-Question 2
-
- Which states show the strongest sales performance?
-Problem
-
-The business operates across multiple states, but sales are not distributed evenly. Understanding where
-revenue is concentrated and where customers generate higher order values can help determine how
-different markets should be managed.
-
-Answer
-
-São Paulo (SP) is the strongest state by total sales, generating approximately ₹5.20M from 41,375
-orders.
-
-This represents roughly 38.3% of the ₹13.59M total merchandise sales in the analysis.
-
-São Paulo is also substantially ahead of the next-largest states: Rio de Janeiro generated ₹1.82M and
-Minas Gerais generated ₹1.59M.</div>
+                <div class="report-text">
+<h4>Insight</h4>
+<p><strong>Observation:</strong> Health &amp; Beauty generated the highest sales at ₹1.26M, while Bed Bath &amp; Table generated the highest item volume at 11,115 and Watches &amp; Gifts generated ₹1.21M despite selling only 5,991 items.</p>
+<p><strong>Reason:</strong> Health &amp; Beauty combines strong demand with meaningful item value, Bed Bath &amp; Table relies more heavily on sales volume, while Watches &amp; Gifts generates substantial revenue from higher-value products.</p>
+<p><strong>Impact:</strong> Managing all three categories using the same inventory or promotional strategy could miss the reason each category is contributing strongly to revenue.</p>
+<h4>Recommendation</h4>
+<ul><li>Prioritize inventory availability for Health &amp; Beauty, because its ₹1.26M contribution makes it the largest category-level revenue source.</li><li>For Bed Bath &amp; Table, identify the highest-selling products within the 11,115 items sold and prioritize their stock availability, because the category's performance is strongly volume-driven.</li><li>For Watches &amp; Gifts, identify the products responsible for the category's higher item value and prioritize their availability and relevant promotions, rather than focusing only on increasing unit volume.</li><li>Use the top-selling SKUs within each major category as the operational inventory and promotion list instead of applying one strategy to the entire category.</li></ul>
+<h3>Question 2</h3>
+<p class="q">Which states show the strongest sales performance?</p>
+<h4>Problem</h4>
+<p>The business operates across multiple states, but sales are not distributed evenly. Understanding where revenue is concentrated and where customers generate higher order values can help determine how different markets should be managed.</p>
+<h4>Answer</h4>
+<p>São Paulo (SP) is the strongest state by total sales, generating approximately ₹5.20M from 41,375 orders.</p>
+<p>This represents roughly 38.3% of the ₹13.59M total merchandise sales in the analysis.</p>
+<p>São Paulo is also substantially ahead of the next-largest states: Rio de Janeiro generated ₹1.82M and Minas Gerais generated ₹1.59M.</p>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">However, São Paulo does not have the highest average sales per order. Bahia recorded
-approximately ₹152.28 per order, compared with ₹125.75 in São Paulo.
-
-Therefore, São Paulo is the largest market by scale, while some smaller states generate greater value
-per order.
-
-Analysis
-
-State performance was evaluated using total sales, order count, and average sales per order.
-
-São Paulo recorded approximately 41,375 orders, compared with 12,762 in Rio de Janeiro and 11,544
-in Minas Gerais.
-
-Its ₹5.20M sales therefore come from a very large order base.
-
-The average-sales-per-order analysis gives a different perspective. Bahia generated approximately
-₹152.28 per order, while Santa Catarina generated ₹144.12 and Goiás ₹146.78.
-
-This means a state can have lower total sales while still showing stronger customer spending on an
-individual order.
-
-Insight
-
-Observation: São Paulo generated ₹5.20M, approximately 38.3% of total merchandise sales, while
-Bahia generated a higher average sales per order of ₹152.28 compared with São Paulo&#x27;s ₹125.75.
-
-Reason: São Paulo&#x27;s overall sales leadership is primarily associated with its much larger order volume,
-whereas some smaller markets generate more value from each order.
-
-Impact: Geographic performance should not be evaluated only by total sales. A high-volume market and
-a high-order-value market present different operational opportunities.
-
-Recommendation
-
-    ●​ Protect São Paulo&#x27;s existing sales base by prioritizing availability of the products and
-       categories already generating the highest sales in the state.
-    ●​ For Bahia, Santa Catarina, and Goiás, identify the categories and products behind their higher
-       average order values and use those products for targeted promotions and availability planning.
-    ●​ Use a volume-focused strategy in São Paulo, where maintaining availability across
-       high-demand products can protect a ₹5.20M sales base.
-    ●​ Use a basket-value strategy in higher-value states, focusing on products that are already
-       generating larger orders.
-    ●​ Before increasing inventory or promotional spending in a state, identify its top-selling products
-       and categories so investment is directed toward demonstrated demand.
-
-.</div>
+                <div class="report-text">
+<p>However, São Paulo does not have the highest average sales per order. Bahia recorded approximately ₹152.28 per order, compared with ₹125.75 in São Paulo.</p>
+<p>Therefore, São Paulo is the largest market by scale, while some smaller states generate greater value per order.</p>
+<h4>Analysis</h4>
+<p>State performance was evaluated using total sales, order count, and average sales per order.</p>
+<p>São Paulo recorded approximately 41,375 orders, compared with 12,762 in Rio de Janeiro and 11,544 in Minas Gerais.</p>
+<p>Its ₹5.20M sales therefore come from a very large order base.</p>
+<p>The average-sales-per-order analysis gives a different perspective. Bahia generated approximately ₹152.28 per order, while Santa Catarina generated ₹144.12 and Goiás ₹146.78.</p>
+<p>This means a state can have lower total sales while still showing stronger customer spending on an individual order.</p>
+<h4>Insight</h4>
+<p><strong>Observation:</strong> São Paulo generated ₹5.20M, approximately 38.3% of total merchandise sales, while Bahia generated a higher average sales per order of ₹152.28 compared with São Paulo's ₹125.75.</p>
+<p><strong>Reason:</strong> São Paulo's overall sales leadership is primarily associated with its much larger order volume, whereas some smaller markets generate more value from each order.</p>
+<p><strong>Impact:</strong> Geographic performance should not be evaluated only by total sales. A high-volume market and a high-order-value market present different operational opportunities.</p>
+<h4>Recommendation</h4>
+<ul><li>Protect São Paulo's existing sales base by prioritizing availability of the products and categories already generating the highest sales in the state.</li><li>For Bahia, Santa Catarina, and Goiás, identify the categories and products behind their higher average order values and use those products for targeted promotions and availability planning.</li><li>Use a volume-focused strategy in São Paulo, where maintaining availability across high-demand products can protect a ₹5.20M sales base.</li><li>Use a basket-value strategy in higher-value states, focusing on products that are already generating larger orders.</li><li>Before increasing inventory or promotional spending in a state, identify its top-selling products and categories so investment is directed toward demonstrated demand.</li></ul>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">Question 3
-
-Does delivery time relate to customer review scores?
-Problem
-
-Delivery performance is an important part of the customer experience. The business needs to
-understand whether longer delivery times are associated with lower customer satisfaction and where
-delivery performance requires attention.
-
-Answer
-
-Yes. Longer delivery times are associated with progressively lower average review scores.
-
-The average review score falls from 4.45 for orders delivered within 0–5 days to 3.35 for orders
-taking 25–29.145 days.
-
-That is a 1.10-point difference in average review score.
-
-The relationship is also reflected in the correlation analysis: the overall correlation was approximately
--0.33. After excluding delivery-time values above the calculated outlier boundary of 29.145 days, the
-correlation weakened to approximately -0.17.
-
-This means unusually long deliveries contribute to the overall relationship, but the downward pattern
-remains across the normal analyzed delivery ranges.
-
-Analysis
-
-Delivery time was calculated from the order purchase timestamp to the actual customer delivery date.
-
-Across the analyzed delivered orders:
-
-    ●​   Mean delivery time: 12.56 days
-    ●​   Median delivery time: 10.22 days
-    ●​   75% of orders were delivered within approximately 15.72 days
-    ●​   90% were delivered within approximately 23.10 days
-
-Orders were then grouped into delivery-time buckets and compared with their average review scores.
-
-The pattern was consistent:
-
-    ●​   0–5 days → 4.45
-    ●​   5–10 days → 4.36
-    ●​   10–15 days → 4.27
-    ●​   15–20 days → 4.13
-    ●​   20–25 days → 3.87
-    ●​   25–29.145 days → 3.35</div>
+                <div class="report-text">
+<h3>Question 3</h3>
+<p class="q">Does delivery time relate to customer review scores?</p>
+<h4>Problem</h4>
+<p>Delivery performance is an important part of the customer experience. The business needs to understand whether longer delivery times are associated with lower customer satisfaction and where delivery performance requires attention.</p>
+<h4>Answer</h4>
+<p>Yes. Longer delivery times are associated with progressively lower average review scores.</p>
+<p>The average review score falls from 4.45 for orders delivered within 0–5 days to 3.35 for orders taking 25–29.145 days.</p>
+<p>That is a 1.10-point difference in average review score.</p>
+<p>The relationship is also reflected in the correlation analysis: the overall correlation was approximately -0.33. After excluding delivery-time values above the calculated outlier boundary of 29.145 days, the correlation weakened to approximately -0.17.</p>
+<p>This means unusually long deliveries contribute to the overall relationship, but the downward pattern remains across the normal analyzed delivery ranges.</p>
+<h4>Analysis</h4>
+<p>Delivery time was calculated from the order purchase timestamp to the actual customer delivery date.</p>
+<p>Across the analyzed delivered orders:</p>
+<ul><li>Mean delivery time: 12.56 days</li><li>Median delivery time: 10.22 days</li><li>75% of orders were delivered within approximately 15.72 days</li><li>90% were delivered within approximately 23.10 days</li></ul>
+<p>Orders were then grouped into delivery-time buckets and compared with their average review scores.</p>
+<p>The pattern was consistent:</p>
+<ul><li>0–5 days → 4.45</li><li>5–10 days → 4.36</li><li>10–15 days → 4.27</li><li>15–20 days → 4.13</li><li>20–25 days → 3.87</li><li>25–29.145 days → 3.35</li></ul>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">The analysis therefore shows a clear downward association between longer delivery times and customer
-review scores.
-
-Insight
-
-Observation: Average review scores decline from 4.45 in the 0–5 day range to 3.35 in the 25–29.145
-day range.
-
-Reason: The data shows a consistent association between longer delivery times and lower customer
-ratings. However, delivery time is not the only factor that can influence a customer&#x27;s review.
-
-Impact: Long-delivery orders represent a customer-experience risk. The difference between 4.45 and
-3.35 suggests that the highest-delay orders deserve operational attention.
-
-Recommendation
-
-    ●​ Create an operational exception list for orders approaching or exceeding 20 days, because
-       review scores fall to approximately 3.87 in the 20–25 day range and 3.35 in the 25–29.145 day
-       range.
-    ●​ Break those delayed orders down by state, seller, and product category to identify where the
-       delays are concentrated.
-    ●​ Prioritize intervention for segments showing both high delivery time and low review scores
-       rather than treating every delayed order equally.
-    ●​ Track delivery time and review score together as customer-experience KPIs.
-    ●​ After interventions are introduced, compare the number of long-delivery orders and average
-       review scores over time to determine whether the operational changes are improving the
-       customer experience.
-
-
-
-Question 4
-
-How are sales changing over time?
-Problem
-
-The business needs to understand its sales trajectory, identify periods of strong performance, and
-determine whether changes in revenue are driven only by order volume or also by the value and
-composition of orders.
-
-Answer
-
-Sales show a strong upward trend through 2017, followed by consistently high monthly sales during
-the available 2018 period.
-
-Monthly sales increased from approximately ₹120K in January 2017 to ₹664K in October 2017, before
-reaching the highest recorded month of approximately ₹1.01M in November 2017.</div>
+                <div class="report-text">
+<p>The analysis therefore shows a clear downward association between longer delivery times and customer review scores.</p>
+<h4>Insight</h4>
+<p><strong>Observation:</strong> Average review scores decline from 4.45 in the 0–5 day range to 3.35 in the 25–29.145 day range.</p>
+<p><strong>Reason:</strong> The data shows a consistent association between longer delivery times and lower customer ratings. However, delivery time is not the only factor that can influence a customer's review.</p>
+<p><strong>Impact:</strong> Long-delivery orders represent a customer-experience risk. The difference between 4.45 and 3.35 suggests that the highest-delay orders deserve operational attention.</p>
+<h4>Recommendation</h4>
+<ul><li>Create an operational exception list for orders approaching or exceeding 20 days, because review scores fall to approximately 3.87 in the 20–25 day range and 3.35 in the 25–29.145 day range.</li><li>Break those delayed orders down by state, seller, and product category to identify where the delays are concentrated.</li><li>Prioritize intervention for segments showing both high delivery time and low review scores rather than treating every delayed order equally.</li><li>Track delivery time and review score together as customer-experience KPIs.</li><li>After interventions are introduced, compare the number of long-delivery orders and average review scores over time to determine whether the operational changes are improving the customer experience.</li></ul>
+<h3>Question 4</h3>
+<p class="q">How are sales changing over time?</p>
+<h4>Problem</h4>
+<p>The business needs to understand its sales trajectory, identify periods of strong performance, and determine whether changes in revenue are driven only by order volume or also by the value and composition of orders.</p>
+<h4>Answer</h4>
+<p>Sales show a strong upward trend through 2017, followed by consistently high monthly sales during the available 2018 period.</p>
+<p>Monthly sales increased from approximately ₹120K in January 2017 to ₹664K in October 2017, before reaching the highest recorded month of approximately ₹1.01M in November 2017.</p>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">Sales remained close to the ₹1M level in several 2018 months:
-
-    ●​ March 2018: ₹983K
-    ●​ April 2018: ₹997K
-    ●​ May 2018: ₹997K
-
-The beginning and end of the dataset contain partial months, so these should not be interpreted as
-normal full-month sales declines.
-
-Analysis
-
-Monthly sales were calculated using merchandise prices from order items and the purchase month of
-each order.
-
-The dataset shows substantial growth during 2017. Sales increased from ₹120K in January to ₹247K in
-February, ₹374K in March, and ₹506K in May.
-
-Sales continued increasing through much of the year, reaching ₹574K in August, ₹624K in September,
-and ₹664K in October.
-
-November 2017 then reached approximately ₹1.01M, the highest monthly sales value in the dataset.
-
-Sales remained strong in 2018, with several months close to ₹1M.
-
-However, sales and order volume did not always move together. From August to September 2017,
-orders fell slightly from 4,331 to 4,285, while sales increased by approximately ₹50.4K.
-
-
-
-
-Insight
-
-Observation: Monthly sales increased from ₹120K in January 2017 to ₹1.01M in November 2017 and
-remained close to ₹1M in several 2018 months.
-
-Reason: Sales generally move with order volume, but periods such as August–September 2017 show
-that changes in order value and category composition can also increase revenue even when the number
-of orders falls.
-
-Impact: The business should not use order count alone to judge sales performance. Revenue can
-increase through higher-value orders even without an increase in order volume.
-
-Recommendation
-
-    ●​ Monitor total sales, order volume, and average sales per order together each month.
-    ●​ When sales rise while order volume falls, identify the categories and products generating the
-       higher-value orders and protect their availability.
-    ●​ When order volume rises but sales fall, investigate whether customers are shifting toward
-       lower-value products or categories.</div>
+                <div class="report-text">
+<p>Sales remained close to the ₹1M level in several 2018 months:</p>
+<ul><li>March 2018: ₹983K</li><li>April 2018: ₹997K</li><li>May 2018: ₹997K</li></ul>
+<p>The beginning and end of the dataset contain partial months, so these should not be interpreted as normal full-month sales declines.</p>
+<h4>Analysis</h4>
+<p>Monthly sales were calculated using merchandise prices from order items and the purchase month of each order.</p>
+<p>The dataset shows substantial growth during 2017. Sales increased from ₹120K in January to ₹247K in February, ₹374K in March, and ₹506K in May.</p>
+<p>Sales continued increasing through much of the year, reaching ₹574K in August, ₹624K in September, and ₹664K in October.</p>
+<p>November 2017 then reached approximately ₹1.01M, the highest monthly sales value in the dataset.</p>
+<p>Sales remained strong in 2018, with several months close to ₹1M.</p>
+<p>However, sales and order volume did not always move together. From August to September 2017, orders fell slightly from 4,331 to 4,285, while sales increased by approximately ₹50.4K.</p>
+<h4>Insight</h4>
+<p><strong>Observation:</strong> Monthly sales increased from ₹120K in January 2017 to ₹1.01M in November 2017 and remained close to ₹1M in several 2018 months.</p>
+<p><strong>Reason:</strong> Sales generally move with order volume, but periods such as August–September 2017 show that changes in order value and category composition can also increase revenue even when the number of orders falls.</p>
+<p><strong>Impact:</strong> The business should not use order count alone to judge sales performance. Revenue can increase through higher-value orders even without an increase in order volume.</p>
+<h4>Recommendation</h4>
+<ul><li>Monitor total sales, order volume, and average sales per order together each month.</li><li>When sales rise while order volume falls, identify the categories and products generating the higher-value orders and protect their availability.</li><li>When order volume rises but sales fall, investigate whether customers are shifting toward lower-value products or categories.</li></ul>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">   ●​ Compare the category mix of strong and weak months to identify which categories are
-       responsible for meaningful revenue changes.
-    ●​ Use high-performing periods such as November 2017&#x27;s ₹1.01M as benchmarks for
-       understanding what category and order-value combinations supported stronger sales.
-
-
-Question 5
-
-How are new and repeated orders changing?
-Problem
-
-Order growth can come from acquiring new customers or encouraging existing customers to purchase
-again. The business needs to understand how these two sources of orders are changing over time.
-
-
-Answer
-
-Repeated-order volume increased substantially over the observed period, while new customers
-continued to represent the majority of monthly orders.
-
-Repeated orders increased from just 36 in January 2017 to 104 in May, 155 in September, and 240 in
-November 2017.
-
-The increase continued into 2018, reaching 244 repeated orders in January and 277 in February
-2018.
-
-This shows increasing repeat-order activity, but the analysis does not prove that overall customer
-retention improved because repeat-order volume can also rise as the overall customer base becomes
-larger.
-
-Analysis
-
-Customer purchase history was analyzed using customer_unique_id to identify whether an order
-belonged to a customer&#x27;s first purchase or a subsequent purchase.
-
-Each customer&#x27;s earliest purchase was identified and later orders from the same customer were
-classified as repeated orders.​
-The number of repeated orders increased considerably:
-
-    ●​   January 2017 → 36
-    ●​   May 2017 → 104
-    ●​   September 2017 → 155
-    ●​   November 2017 → 240
-    ●​   January 2018 → 244
-    ●​   February 2018 → 277</div>
+                <div class="report-text">
+<ul><li>Compare the category mix of strong and weak months to identify which categories are responsible for meaningful revenue changes.</li><li>Use high-performing periods such as November 2017's ₹1.01M as benchmarks for understanding what category and order-value combinations supported stronger sales.</li></ul>
+<h3>Question 5</h3>
+<p class="q">How are new and repeated orders changing?</p>
+<h4>Problem</h4>
+<p>Order growth can come from acquiring new customers or encouraging existing customers to purchase again. The business needs to understand how these two sources of orders are changing over time.</p>
+<h4>Answer</h4>
+<p>Repeated-order volume increased substantially over the observed period, while new customers continued to represent the majority of monthly orders.</p>
+<p>Repeated orders increased from just 36 in January 2017 to 104 in May, 155 in September, and 240 in November 2017.</p>
+<p>The increase continued into 2018, reaching 244 repeated orders in January and 277 in February 2018.</p>
+<p>This shows increasing repeat-order activity, but the analysis does not prove that overall customer retention improved because repeat-order volume can also rise as the overall customer base becomes larger.</p>
+<h4>Analysis</h4>
+<p>Customer purchase history was analyzed using customer_unique_id to identify whether an order belonged to a customer's first purchase or a subsequent purchase.</p>
+<p>Each customer's earliest purchase was identified and later orders from the same customer were classified as repeated orders.</p>
+<p>The number of repeated orders increased considerably:</p>
+<ul><li>January 2017 → 36</li><li>May 2017 → 104</li><li>September 2017 → 155</li><li>November 2017 → 240</li><li>January 2018 → 244</li><li>February 2018 → 277</li></ul>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">At the same time, new customers remained the larger source of monthly orders.
-
-For example, in August 2017 there were 4,184 new orders and 147 repeated orders, meaning
-repeated orders represented approximately 3.4% of the 4,331 total orders that month.
-
-Insight
-
-Observation: Repeated orders increased from 36 in January 2017 to 277 in February 2018, but new
-customers continued to generate the majority of orders.
-
-Reason: The marketplace is receiving orders from both newly acquired customers and customers
-returning after a previous purchase. The growing number of repeated orders indicates increasing
-repeat-purchase activity, although it does not by itself establish a higher retention rate.
-
-Impact: The business has two sources of order growth: continued customer acquisition and repeat
-purchasing. Understanding both is necessary for sustainable customer growth.
-
-Recommendation
-
-    ●​ Separate acquisition and retention strategies instead of treating all customers as one group.
-    ●​ For existing customers, analyze their previous product and category purchases and use those
-       patterns to create relevant follow-up offers, cross-selling opportunities, or replenishment
-       reminders.
-    ●​ Identify categories with stronger repeat purchasing and prioritize those categories for retention
-       campaigns.
-    ●​ Track repeat-customer rate in addition to repeat-order volume, so growth is measured based
-       on customer behavior rather than order count alone.
-    ●​ Measure whether customers exposed to retention actions actually return for another purchase
-       and use that result to refine future campaigns.
-
-
-Question 6
-
-What factors are associated with changes in sales and
-order volume?
-Problem
-
-Sales and order volume generally move together, but not always. The business needs to understand
-what is happening when revenue and order volume move in different directions so that the correct
-operational response can be taken.
-
-Answer
-
-Order volume is an important factor associated with sales, but it does not fully explain revenue
-changes.</div>
+                <div class="report-text">
+<p>At the same time, new customers remained the larger source of monthly orders.</p>
+<p>For example, in August 2017 there were 4,184 new orders and 147 repeated orders, meaning repeated orders represented approximately 3.4% of the 4,331 total orders that month.</p>
+<h4>Insight</h4>
+<p><strong>Observation:</strong> Repeated orders increased from 36 in January 2017 to 277 in February 2018, but new customers continued to generate the majority of orders.</p>
+<p><strong>Reason:</strong> The marketplace is receiving orders from both newly acquired customers and customers returning after a previous purchase. The growing number of repeated orders indicates increasing repeat-purchase activity, although it does not by itself establish a higher retention rate.</p>
+<p><strong>Impact:</strong> The business has two sources of order growth: continued customer acquisition and repeat purchasing. Understanding both is necessary for sustainable customer growth.</p>
+<h4>Recommendation</h4>
+<ul><li>Separate acquisition and retention strategies instead of treating all customers as one group.</li><li>For existing customers, analyze their previous product and category purchases and use those patterns to create relevant follow-up offers, cross-selling opportunities, or replenishment reminders.</li><li>Identify categories with stronger repeat purchasing and prioritize those categories for retention campaigns.</li><li>Track repeat-customer rate in addition to repeat-order volume, so growth is measured based on customer behavior rather than order count alone.</li><li>Measure whether customers exposed to retention actions actually return for another purchase and use that result to refine future campaigns.</li></ul>
+<h3>Question 6</h3>
+<p class="q">What factors are associated with changes in sales and order volume?</p>
+<h4>Problem</h4>
+<p>Sales and order volume generally move together, but not always. The business needs to understand what is happening when revenue and order volume move in different directions so that the correct operational response can be taken.</p>
+<h4>Answer</h4>
+<p>Order volume is an important factor associated with sales, but it does not fully explain revenue changes.</p>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">Most months show sales and order volume moving together, but several periods demonstrate the
-importance of order value and category composition:
-
-    ●​ From August to September 2017, orders decreased by 46, from 4,331 to 4,285, while sales
-       increased by approximately ₹50.4K.
-    ●​ From March to April 2018, orders decreased by 272, from 7,211 to 6,939, while sales increased
-       by approximately ₹13.4K.
-    ●​ From July to August 2018, orders increased by 220, from 6,292 to 6,512, while sales decreased
-       by approximately ₹40.8K.
-
-These examples demonstrate that more orders do not always mean more sales, and fewer orders
-do not always mean lower sales.
-
-Analysis
-
-Monthly sales and order volume were compared to identify whether both measures moved in the same
-direction.
-
-Most months showed a positive relationship between sales and orders, indicating that order volume is an
-important component of revenue performance.
-
-However, the exceptions provide important business information.
-
-In August–September 2017, the business received 46 fewer orders but generated ₹50.4K more sales.
-This means the value generated per order increased.
-
-Similarly, March–April 2018 saw 272 fewer orders but ₹13.4K higher sales.
-
-The opposite pattern occurred in July–August 2018: orders increased by 220, but sales fell by
-approximately ₹40.8K.
-
-Category-level analysis of these periods showed that several major categories remained among the top
-contributors, while their individual sales values changed. Therefore, the composition and value of orders
-matter alongside order volume.
-
-Insight
-
-Observation: Sales and order volume generally move together, but the August–September 2017,
-March–April 2018, and July–August 2018 periods show that the two measures can move in opposite
-directions.
-
-Reason: Changes in average order value and category-level sales can offset changes in order volume.
-A smaller number of higher-value orders can generate more revenue, while a larger number of
-lower-value orders can generate less.
-
-Impact: Looking only at order volume can lead to an incorrect interpretation of revenue performance and
-potentially result in the wrong business action.</div>
+                <div class="report-text">
+<p>Most months show sales and order volume moving together, but several periods demonstrate the importance of order value and category composition:</p>
+<ul><li>From August to September 2017, orders decreased by 46, from 4,331 to 4,285, while sales increased by approximately ₹50.4K.</li><li>From March to April 2018, orders decreased by 272, from 7,211 to 6,939, while sales increased by approximately ₹13.4K.</li><li>From July to August 2018, orders increased by 220, from 6,292 to 6,512, while sales decreased by approximately ₹40.8K.</li></ul>
+<p>These examples demonstrate that more orders do not always mean more sales, and fewer orders do not always mean lower sales.</p>
+<h4>Analysis</h4>
+<p>Monthly sales and order volume were compared to identify whether both measures moved in the same direction.</p>
+<p>Most months showed a positive relationship between sales and orders, indicating that order volume is an important component of revenue performance.</p>
+<p>However, the exceptions provide important business information.</p>
+<p>In August–September 2017, the business received 46 fewer orders but generated ₹50.4K more sales. This means the value generated per order increased.</p>
+<p>Similarly, March–April 2018 saw 272 fewer orders but ₹13.4K higher sales.</p>
+<p>The opposite pattern occurred in July–August 2018: orders increased by 220, but sales fell by approximately ₹40.8K.</p>
+<p>Category-level analysis of these periods showed that several major categories remained among the top contributors, while their individual sales values changed. Therefore, the composition and value of orders matter alongside order volume.</p>
+<h4>Insight</h4>
+<p><strong>Observation:</strong> Sales and order volume generally move together, but the August–September 2017, March–April 2018, and July–August 2018 periods show that the two measures can move in opposite directions.</p>
+<p><strong>Reason:</strong> Changes in average order value and category-level sales can offset changes in order volume. A smaller number of higher-value orders can generate more revenue, while a larger number of lower-value orders can generate less.</p>
+<p><strong>Impact:</strong> Looking only at order volume can lead to an incorrect interpretation of revenue performance and potentially result in the wrong business action.</p>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">Recommendation
-
-  ●​ Monitor total sales, order volume, and average sales per order together as the core monthly
-     revenue indicators.
-  ●​ When orders increase but sales decrease, identify the categories and products responsible for
-     the lower-value orders and check whether high-value categories are losing sales share.
-  ●​ When orders decrease but sales increase, identify the products and categories responsible for
-     the higher-value orders and protect their inventory availability.
-  ●​ For significant month-to-month changes, compare the top category and product mix before
-     deciding whether the appropriate response is inventory, promotion, or category-level intervention.
-  ●​ Use the analysis to distinguish between three situations: insufficient demand volume, lower
-     order value, or changing category mix. Each requires a different action rather than
-     automatically increasing promotions or inventory.</div>
+                <div class="report-text">
+<h4>Recommendation</h4>
+<ul><li>Monitor total sales, order volume, and average sales per order together as the core monthly revenue indicators.</li><li>When orders increase but sales decrease, identify the categories and products responsible for the lower-value orders and check whether high-value categories are losing sales share.</li><li>When orders decrease but sales increase, identify the products and categories responsible for the higher-value orders and protect their inventory availability.</li><li>For significant month-to-month changes, compare the top category and product mix before deciding whether the appropriate response is inventory, promotion, or category-level intervention.</li><li>Use the analysis to distinguish between three situations: insufficient demand volume, lower order value, or changing category mix. Each requires a different action rather than automatically increasing promotions or inventory.</li></ul>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">4. Consolidated Business Recommendations
-4.1 Protect High-Value Revenue Sources
-
-The analysis shows that ₹13.59M in merchandise sales were generated across the dataset, with Health
-&amp; Beauty contributing ₹1.26M (9.3%) and São Paulo contributing ₹5.20M (38.3%) of total sales. These
-areas represent significant existing revenue sources.
-
-Action: Maintain strong inventory availability for the highest-selling products in Health &amp; Beauty and in
-São Paulo. Product-level stock planning should prioritize items that already demonstrate strong sales
-rather than distributing inventory equally across all products and markets.
-
-
-
-
-4.2 Manage Categories According to How They Generate Revenue
-
-The category analysis showed different performance patterns. Bed Bath &amp; Table sold 11,115 items, the
-highest volume, while Watches &amp; Gifts generated ₹1.21M from 5,991 items, supported by a much
-higher average item value.
-
-Action: Use different category strategies instead of treating all high-performing categories equally.
-Maintain stock depth for high-volume categories such as Bed Bath &amp; Table, while protecting availability
-and targeted promotion of higher-value products within categories such as Watches &amp; Gifts.
-
-
-
-
-4.3 Reduce Exposure to Long Delivery Times
-
-Average review scores declined from 4.45 for 0–5 day deliveries to 3.35 for 25–29.145 day deliveries,
-a difference of 1.10 points.
-
-Action: Monitor orders approaching longer delivery ranges, particularly those exceeding approximately
-20 days, and investigate the states, sellers, and categories responsible for these delays. The objective
-should be to reduce the number of severely delayed orders and monitor whether review scores improve
-alongside delivery performance.
-
-
-
-
-4.4 Use Both Customer Acquisition and Repeat Purchasing
-
-Repeated orders increased from 36 in January 2017 to 277 in February 2018, while new customers
-continued to represent the majority of orders.
-
-Action: Maintain customer-acquisition activity while developing a separate retention strategy for existing
-customers. Use previous purchase categories and products to identify relevant cross-selling,
-replenishment, or follow-up opportunities, and measure success through repeat-customer behavior
-rather than repeat-order volume alone.</div>
+                <div class="report-text">
+<h2>4. Consolidated Business Recommendations</h2>
+<h3>4.1 Protect High-Value Revenue Sources</h3>
+<p>The analysis shows that ₹13.59M in merchandise sales were generated across the dataset, with Health &amp; Beauty contributing ₹1.26M (9.3%) and São Paulo contributing ₹5.20M (38.3%) of total sales. These areas represent significant existing revenue sources.</p>
+<p><strong>Action:</strong> Maintain strong inventory availability for the highest-selling products in Health &amp; Beauty and in São Paulo. Product-level stock planning should prioritize items that already demonstrate strong sales rather than distributing inventory equally across all products and markets.</p>
+<h3>4.2 Manage Categories According to How They Generate Revenue</h3>
+<p>The category analysis showed different performance patterns. Bed Bath &amp; Table sold 11,115 items, the highest volume, while Watches &amp; Gifts generated ₹1.21M from 5,991 items, supported by a much higher average item value.</p>
+<p><strong>Action:</strong> Use different category strategies instead of treating all high-performing categories equally. Maintain stock depth for high-volume categories such as Bed Bath &amp; Table, while protecting availability and targeted promotion of higher-value products within categories such as Watches &amp; Gifts.</p>
+<h3>4.3 Reduce Exposure to Long Delivery Times</h3>
+<p>Average review scores declined from 4.45 for 0–5 day deliveries to 3.35 for 25–29.145 day deliveries, a difference of 1.10 points.</p>
+<p><strong>Action:</strong> Monitor orders approaching longer delivery ranges, particularly those exceeding approximately 20 days, and investigate the states, sellers, and categories responsible for these delays. The objective should be to reduce the number of severely delayed orders and monitor whether review scores improve alongside delivery performance.</p>
+<h3>4.4 Use Both Customer Acquisition and Repeat Purchasing</h3>
+<p>Repeated orders increased from 36 in January 2017 to 277 in February 2018, while new customers continued to represent the majority of orders.</p>
+<p><strong>Action:</strong> Maintain customer-acquisition activity while developing a separate retention strategy for existing customers. Use previous purchase categories and products to identify relevant cross-selling, replenishment, or follow-up opportunities, and measure success through repeat-customer behavior rather than repeat-order volume alone.</p>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">4.5 Monitor Revenue Through Sales, Orders, and Order Value Together
-
-The analysis showed that sales and order volume usually move together, but not always. From July to
-August 2018, orders increased by 220, while sales decreased by approximately ₹40.8K. Conversely,
-from August to September 2017, orders decreased by 46, while sales increased by approximately
-₹50.4K.
-
-Action: Track total sales, order volume, and average sales per order together. When these
-measures move in different directions, investigate the category and product mix before deciding whether
-the appropriate response is additional inventory, targeted promotion, or protection of high-value products.
-
-
-
-
-4.6 Prioritize Decisions Using Evidence Rather Than Equal Allocation
-
-The analysis shows substantial differences across categories, states, delivery performance, and
-customer behavior. For example, São Paulo generated ₹5.20M, while Bahia generated a higher average
-sales value per order of ₹152.28 compared with São Paulo&#x27;s ₹125.75.
-
-Action: Allocate operational attention according to the specific business situation: protect high-volume
-revenue markets, investigate high-value markets for expansion opportunities, maintain stock for proven
-high-demand products, and prioritize operational intervention where delivery performance is weakest.
-
-
-
-
-Overall Business Direction
-The analysis indicates that the business should focus on protecting existing high-value revenue,
-managing products and markets according to their actual sales behavior, reducing exposure to
-long delivery times, and developing repeat purchasing alongside new-customer acquisition.
-
-The key principle is to avoid treating the entire marketplace in the same way. The data shows that
-different categories, states, customer groups, and delivery segments behave differently, so
-operational actions should be targeted according to the evidence.</div>
+                <div class="report-text">
+<h3>4.5 Monitor Revenue Through Sales, Orders, and Order Value Together</h3>
+<p>The analysis showed that sales and order volume usually move together, but not always. From July to August 2018, orders increased by 220, while sales decreased by approximately ₹40.8K. Conversely, from August to September 2017, orders decreased by 46, while sales increased by approximately ₹50.4K.</p>
+<p><strong>Action:</strong> Track total sales, order volume, and average sales per order together. When these measures move in different directions, investigate the category and product mix before deciding whether the appropriate response is additional inventory, targeted promotion, or protection of high-value products.</p>
+<h3>4.6 Prioritize Decisions Using Evidence Rather Than Equal Allocation</h3>
+<p>The analysis shows substantial differences across categories, states, delivery performance, and customer behavior. For example, São Paulo generated ₹5.20M, while Bahia generated a higher average sales value per order of ₹152.28 compared with São Paulo's ₹125.75.</p>
+<p><strong>Action:</strong> Allocate operational attention according to the specific business situation: protect high-volume revenue markets, investigate high-value markets for expansion opportunities, maintain stock for proven high-demand products, and prioritize operational intervention where delivery performance is weakest.</p>
+<h3>Overall Business Direction</h3>
+<p>The analysis indicates that the business should focus on protecting existing high-value revenue, managing products and markets according to their actual sales behavior, reducing exposure to long delivery times, and developing repeat purchasing alongside new-customer acquisition.</p>
+<p>The key principle is to avoid treating the entire marketplace in the same way. The data shows that different categories, states, customer groups, and delivery segments behave differently, so operational actions should be targeted according to the evidence.</p>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">5. Dashboard &amp; Decision Support
-The Power BI dashboard was developed to convert the analysis into an interactive decision-support tool.
-The five dashboard pages bring together the key measures identified throughout the analysis, allowing
-business users to move from overall performance to category, customer, delivery, and payment-level
-details.
-
-
-
-
-5.1 Executive Overview
-The Olist E-Commerce Executive Overview provides a consolidated view of the business through total
-sales, total orders, active customers, and average order value.
-
-The dashboard supports the overall finding of approximately ₹13.59M in merchandise sales across the
-analyzed order-item data. It also highlights the concentration of sales across categories and states,
-including ₹1.26M from Health &amp; Beauty and approximately ₹5.20M from São Paulo.
-
-The monthly sales trend allows users to observe the increase in sales over time, including the peak of
-approximately ₹1.01M in November 2017.
-
-Business use: Management can use this page to quickly assess overall business performance and
-identify the categories, states, and periods contributing most to sales before moving into more detailed
-analysis.</div>
-
+                <div class="report-text">
+<h2>5. Dashboard &amp; Decision Support</h2>
+<p>The Power BI dashboard was developed to convert the analysis into an interactive decision-support tool. The five dashboard pages bring together the key measures identified throughout the analysis, allowing business users to move from overall performance to category, customer, delivery, and payment-level details.</p>
+<h3>5.1 Executive Overview</h3>
+<p>The <strong>Olist E-Commerce Executive Overview</strong> provides a consolidated view of the business through total sales, total orders, active customers, and average order value.</p>
+<p>The dashboard supports the overall finding of approximately <strong>₹13.59M in merchandise sales</strong> across the analyzed order-item data. It also highlights the concentration of sales across categories and states, including <strong>₹1.26M from Health &amp; Beauty</strong> and approximately <strong>₹5.20M from São Paulo</strong>.</p>
+<p>The monthly sales trend allows users to observe the increase in sales over time, including the peak of approximately <strong>₹1.01M in November 2017</strong>.</p>
+<p><strong>Business use:</strong> Management can use this page to quickly assess overall business performance and identify the categories, states, and periods contributing most to sales before moving into more detailed analysis.</p>
+                </div>
                 <div class="report-visual">
                     <img src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-1.png"
                          alt="Figure 1"
@@ -859,24 +441,14 @@ analysis.</div>
 
 
             <div class="report-page">
-                <div class="report-text">5.2 Product &amp; Sales Analysis
-The Product &amp; Sales Analysis page examines category performance through three different measures:
-
-    ●​ Total sales
-    ●​ Items sold
-    ●​ Average item price
-
-This view reflects the finding that categories generate revenue through different combinations of volume
-and value.
-
-For example, Bed Bath &amp; Table sold 11,115 items and generated approximately ₹1.04M, while
-Watches &amp; Gifts generated approximately ₹1.21M from 5,991 items. Comparing these measures
-helps explain why two categories with different sales volumes can still generate similar levels of revenue.
-
-Business use: Category managers can use the page to identify whether a category requires a
-volume-focused or value-focused approach, supporting more targeted inventory and promotional
-decisions.</div>
-
+                <div class="report-text">
+<h3>5.2 Product &amp; Sales Analysis</h3>
+<p>The <strong>Product &amp; Sales Analysis</strong> page examines category performance through three different measures:</p>
+<ul><li>Total sales</li><li>Items sold</li><li>Average item price</li></ul>
+<p>This view reflects the finding that categories generate revenue through different combinations of volume and value.</p>
+<p>For example, <strong>Bed Bath &amp; Table sold 11,115 items and generated approximately ₹1.04M</strong>, while <strong>Watches &amp; Gifts generated approximately ₹1.21M from 5,991 items</strong>. Comparing these measures helps explain why two categories with different sales volumes can still generate similar levels of revenue.</p>
+<p><strong>Business use:</strong> Category managers can use the page to identify whether a category requires a <strong>volume-focused or value-focused approach</strong>, supporting more targeted inventory and promotional decisions.</p>
+                </div>
                 <div class="report-visual">
                     <img src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-2.png"
                          alt="Figure 2"
@@ -887,22 +459,13 @@ decisions.</div>
 
 
             <div class="report-page">
-                <div class="report-text">5.3 Customer &amp; Order Analysis
-The Customer &amp; Order Analysis page examines order activity from both customer and time
-perspectives.
-
-The dashboard separates new and repeated orders, allowing users to monitor the same
-customer-behavior pattern identified in the analysis. Repeated-order volume increased from 36 orders
-in January 2017 to 277 in February 2018, while new customers continued to account for the majority of
-monthly orders.
-
-The page also shows order distribution by day of the week and customer state, providing additional
-ways to identify where order activity is concentrated.
-
-Business use: Management can monitor whether order activity is being generated primarily by new or
-returning customers and identify states or periods where customer-order activity requires further
-investigation.</div>
-
+                <div class="report-text">
+<h3>5.3 Customer &amp; Order Analysis</h3>
+<p>The <strong>Customer &amp; Order Analysis</strong> page examines order activity from both customer and time perspectives.</p>
+<p>The dashboard separates <strong>new and repeated orders</strong>, allowing users to monitor the same customer-behavior pattern identified in the analysis. Repeated-order volume increased from <strong>36 orders in January 2017 to 277 in February 2018</strong>, while new customers continued to account for the majority of monthly orders.</p>
+<p>The page also shows order distribution by <strong>day of the week and customer state</strong>, providing additional ways to identify where order activity is concentrated.</p>
+<p><strong>Business use:</strong> Management can monitor whether order activity is being generated primarily by new or returning customers and identify states or periods where customer-order activity requires further investigation.</p>
+                </div>
                 <div class="report-visual">
                     <img src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-3.png"
                          alt="Figure 3"
@@ -913,22 +476,14 @@ investigation.</div>
 
 
             <div class="report-page">
-                <div class="report-text">5.4 Delivery &amp; Customer Experience
-The Delivery &amp; Customer Experience page connects delivery performance with customer review
-scores.
-
-The main visualization reflects the relationship identified in the analysis: average review scores declined
-from 4.45 for deliveries within 0–5 days to 3.35 for deliveries taking 25–29.145 days.
-
-The page also compares average delivery time across states with more than 300 analyzed orders,
-preventing very small state samples from dominating the comparison.
-
-The delivery-time distribution provides additional context by showing how many analyzed orders fall into
-each delivery-time range.
-
-Business use: Operations teams can use this page to identify longer delivery segments and investigate
-the states or operational areas where delivery performance may require attention.</div>
-
+                <div class="report-text">
+<h3>5.4 Delivery &amp; Customer Experience</h3>
+<p>The <strong>Delivery &amp; Customer Experience</strong> page connects delivery performance with customer review scores.</p>
+<p>The main visualization reflects the relationship identified in the analysis: average review scores declined from <strong>4.45 for deliveries within 0–5 days to 3.35 for deliveries taking 25–29.145 days</strong>.</p>
+<p>The page also compares average delivery time across states with more than <strong>300 analyzed orders</strong>, preventing very small state samples from dominating the comparison.</p>
+<p>The delivery-time distribution provides additional context by showing how many analyzed orders fall into each delivery-time range.</p>
+<p><strong>Business use:</strong> Operations teams can use this page to identify longer delivery segments and investigate the states or operational areas where delivery performance may require attention.</p>
+                </div>
                 <div class="report-visual">
                     <img src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-4.png"
                          alt="Figure 4"
@@ -939,26 +494,14 @@ the states or operational areas where delivery performance may require attention
 
 
             <div class="report-page">
-                <div class="report-text">5.5 Payment &amp; Revenue Analysis
-The Payment &amp; Revenue Analysis page provides an additional view of customer payment behavior
-through:
-
-    ●​   Payment value by payment method
-    ●​   Payment value by installment count
-    ●​   Multiple-payment orders over time
-    ●​   Total sales
-    ●​   Payment revenue
-    ●​   Average payment per order
-
-This page complements the merchandise-sales analysis by showing how customer payments are
-distributed across payment methods and installment behavior.
-
-The multiple-payment view also allows management to observe changes in the number of orders
-involving more than one payment over the available period.
-
-Business use: The page can support monitoring of payment behavior and help identify payment
-patterns that may require further investigation.</div>
-
+                <div class="report-text">
+<h3>5.5 Payment &amp; Revenue Analysis</h3>
+<p>The <strong>Payment &amp; Revenue Analysis</strong> page provides an additional view of customer payment behavior through:</p>
+<ul><li>Payment value by payment method</li><li>Payment value by installment count</li><li>Multiple-payment orders over time</li><li>Total sales</li><li>Payment revenue</li><li>Average payment per order</li></ul>
+<p>This page complements the merchandise-sales analysis by showing how customer payments are distributed across payment methods and installment behavior.</p>
+<p>The multiple-payment view also allows management to observe changes in the number of orders involving more than one payment over the available period.</p>
+<p><strong>Business use:</strong> The page can support monitoring of payment behavior and help identify payment patterns that may require further investigation.</p>
+                </div>
                 <div class="report-visual">
                     <img src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-5.png"
                          alt="Figure 5"
@@ -969,87 +512,34 @@ patterns that may require further investigation.</div>
 
 
             <div class="report-page">
-                <div class="report-text">5.6 Dashboard as a Decision-Support Tool
-The dashboard is structured to move from overall business performance to specific operational
-areas:
-
-Executive Overview → Product &amp; Sales → Customer &amp; Orders → Delivery &amp; Customer Experience
-→ Payment &amp; Revenue
-
-Each page supports findings established through the underlying analysis rather than introducing
-unsupported conclusions.
-
-For example:
-
-    ●​ The Executive Overview highlights the ₹13.59M overall merchandise sales and major sales
-       contributors.
-    ●​ Product analysis explains the different ways categories such as Health &amp; Beauty, Bed Bath &amp;
-       Table, and Watches &amp; Gifts generate revenue.
-    ●​ Customer analysis tracks the increase in repeated orders from 36 to 277.
-    ●​ Delivery analysis highlights the 4.45 to 3.35 review-score difference across delivery-time
-       ranges.
-    ●​ Payment analysis provides additional visibility into how customers complete their purchases.
-
-The dashboard therefore allows decision-makers to move from “What is happening?” to “Where is it
-happening?” and then “What should we investigate or act on?”
-
-The dashboard itself does not establish causality. Its purpose is to make the analyzed metrics
-interactive, comparable, and easier to monitor, while the business recommendations remain
-grounded in the evidence established through the analysis.
-
-Decision-Support Value
-
-The dashboard can help the business:
-
-    ●​   Protect high-performing revenue sources by monitoring major categories and markets.
-    ●​   Prioritize products and categories based on sales volume and value.
-    ●​   Monitor repeat-order activity alongside new-customer orders.
-    ●​   Identify longer delivery segments that warrant operational investigation.
-    ●​   Monitor payment behavior and changes in multiple-payment orders.
-    ●​   Investigate unusual movements in sales and order volume before deciding on inventory or
-         promotional actions.</div>
+                <div class="report-text">
+<h3>5.6 Dashboard as a Decision-Support Tool</h3>
+<p>The dashboard is structured to move from overall business performance to specific operational areas:</p>
+<p>Executive Overview → Product &amp; Sales → Customer &amp; Orders → Delivery &amp; Customer Experience → Payment &amp; Revenue</p>
+<p>Each page supports findings established through the underlying analysis rather than introducing unsupported conclusions.</p>
+<p>For example:</p>
+<ul><li>The Executive Overview highlights the ₹13.59M overall merchandise sales and major sales contributors.</li><li>Product analysis explains the different ways categories such as Health &amp; Beauty, Bed Bath &amp; Table, and Watches &amp; Gifts generate revenue.</li><li>Customer analysis tracks the increase in repeated orders from 36 to 277.</li><li>Delivery analysis highlights the 4.45 to 3.35 review-score difference across delivery-time ranges.</li><li>Payment analysis provides additional visibility into how customers complete their purchases.</li></ul>
+<p>The dashboard therefore allows decision-makers to move from “What is happening?” to “Where is it happening?” and then “What should we investigate or act on?”</p>
+<p>The dashboard itself does not establish causality. Its purpose is to make the analyzed metrics interactive, comparable, and easier to monitor, while the business recommendations remain grounded in the evidence established through the analysis.</p>
+<h4>Decision-Support Value</h4>
+<p>The dashboard can help the business:</p>
+<ul><li>Protect high-performing revenue sources by monitoring major categories and markets.</li><li>Prioritize products and categories based on sales volume and value.</li><li>Monitor repeat-order activity alongside new-customer orders.</li><li>Identify longer delivery segments that warrant operational investigation.</li><li>Monitor payment behavior and changes in multiple-payment orders.</li><li>Investigate unusual movements in sales and order volume before deciding on inventory or promotional actions.</li></ul>
+                </div>
             </div>
 
 
             <div class="report-page">
-                <div class="report-text">6. Conclusion
-The analysis provides an overall view of sales performance, customer behavior, product categories,
-geographic markets, delivery experience, and payment activity within the Olist e-commerce business.
-
-The business generated approximately ₹13.59M in merchandise sales, with significant contributions
-from Health &amp; Beauty (₹1.26M) and São Paulo (₹5.20M). Category and state-level analysis also
-showed that strong performance can come from different sources, including higher sales volume and
-higher value per order.
-
-Customer experience represents an important operational area. Average review scores declined from
-4.45 for orders delivered within 0–5 days to 3.35 for orders taking 25–29.145 days, indicating an
-association between longer delivery times and lower customer ratings. This provides a basis for
-monitoring and investigating longer-delivery segments.
-
-Customer behavior also showed increasing repeat-order activity, with repeated orders rising from 36 in
-January 2017 to 277 in February 2018, while new customers continued to represent the majority of
-orders. This indicates that both customer acquisition and repeat purchasing are relevant to order growth.
-
-The analysis further shows that sales performance cannot be assessed through order volume alone. For
-example, between August and September 2017, orders decreased by 46 while sales increased by
-approximately ₹50.4K, whereas between July and August 2018, orders increased by 220 while
-sales decreased by approximately ₹40.8K. This highlights the importance of considering order value
-and category composition when evaluating changes in revenue.
-
-Based on these findings, the key areas requiring continued business attention are maintaining
-availability of high-performing products and markets, managing categories according to their
-sales characteristics, monitoring longer delivery times, strengthening repeat purchasing, and
-evaluating sales through both order volume and order value.
-
-The accompanying Power BI dashboard provides an interactive view of these measures, allowing
-users to monitor performance across products, states, customers, delivery periods, and payment
-behavior. The dashboard can therefore be used alongside this report to review current patterns,
-investigate areas requiring attention, and support operational decision-making based on the analyzed
-measures.
-
-Overall, the findings provide a data-backed basis for maintaining strong-performing areas,
-identifying operational risks, and directing further investigation toward areas with measurable
-differences in performance.</div>
+                <div class="report-text">
+<h2>6. Conclusion</h2>
+<p>The analysis provides an overall view of sales performance, customer behavior, product categories, geographic markets, delivery experience, and payment activity within the Olist e-commerce business.</p>
+<p>The business generated approximately ₹13.59M in merchandise sales, with significant contributions from Health &amp; Beauty (₹1.26M) and São Paulo (₹5.20M). Category and state-level analysis also showed that strong performance can come from different sources, including higher sales volume and higher value per order.</p>
+<p>Customer experience represents an important operational area. Average review scores declined from 4.45 for orders delivered within 0–5 days to 3.35 for orders taking 25–29.145 days, indicating an association between longer delivery times and lower customer ratings. This provides a basis for monitoring and investigating longer-delivery segments.</p>
+<p>Customer behavior also showed increasing repeat-order activity, with repeated orders rising from 36 in January 2017 to 277 in February 2018, while new customers continued to represent the majority of orders. This indicates that both customer acquisition and repeat purchasing are relevant to order growth.</p>
+<p>The analysis further shows that sales performance cannot be assessed through order volume alone. For example, between August and September 2017, orders decreased by 46 while sales increased by approximately ₹50.4K, whereas between July and August 2018, orders increased by 220 while sales decreased by approximately ₹40.8K. This highlights the importance of considering order value and category composition when evaluating changes in revenue.</p>
+<p>Based on these findings, the key areas requiring continued business attention are maintaining availability of high-performing products and markets, managing categories according to their sales characteristics, monitoring longer delivery times, strengthening repeat purchasing, and evaluating sales through both order volume and order value.</p>
+<p>The accompanying Power BI dashboard provides an interactive view of these measures, allowing users to monitor performance across products, states, customers, delivery periods, and payment behavior. The dashboard can therefore be used alongside this report to review current patterns, investigate areas requiring attention, and support operational decision-making based on the analyzed measures.</p>
+<p>Overall, the findings provide a data-backed basis for maintaining strong-performing areas, identifying operational risks, and directing further investigation toward areas with measurable differences in performance.</p>
+                </div>
             </div>
 
         </section>
