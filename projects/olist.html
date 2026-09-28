@@ -6,41 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Olist E-Commerce Analytics | Nikhil Shah</title>
+    <meta name="description" content="Olist Brazilian E-Commerce Analytics report by Nikhil Shah.">
 
-    <meta name="description"
-        content="Olist Brazilian E-Commerce Analytics using Python, SQL and Power BI.">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Existing Portfolio CSS -->
     <link rel="stylesheet" href="../style.css">
 
     <style>
-
         .project-page {
             max-width: 1100px;
             margin: 0 auto;
             padding: 120px 30px 80px;
         }
 
+        .back-button {
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
         .project-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 45px;
         }
 
         .project-header h1 {
             font-size: 42px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .project-header p {
@@ -49,111 +45,57 @@
             line-height: 1.8;
         }
 
-        .project-tech {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .project-tech span {
-            padding: 7px 16px;
-            border-radius: 20px;
-            background: rgba(96, 165, 250, 0.12);
-            border: 1px solid rgba(96, 165, 250, 0.25);
-        }
-
-        .case-section {
-            margin-bottom: 60px;
-        }
-
-        .case-section h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .case-section h3 {
-            font-size: 21px;
-            margin: 25px 0 10px;
-        }
-
-        .case-section p {
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .case-section ul {
-            padding-left: 25px;
-            line-height: 1.9;
-        }
-
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .data-table th,
-        .data-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-        }
-
-        .visual-card {
-            margin: 25px 0 40px;
-            text-align: center;
-        }
-
-        .visual-card img {
-            width: 100%;
-            max-width: 950px;
-            border-radius: 12px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .visual-caption {
-            margin-top: 10px;
-            font-size: 14px;
-            opacity: 0.75;
-        }
-
-        .recommendation-card {
-            padding: 22px;
-            margin-bottom: 18px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .recommendation-card h3 {
-            margin-top: 0;
-        }
-
         .action-buttons {
             display: flex;
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
-            margin-top: 30px;
+            margin: 30px 0 50px;
         }
 
-        .back-button {
-            display: inline-block;
-            margin-bottom: 30px;
+        .report {
+            width: 100%;
         }
 
-        .finding-image {
+        .report-page {
+            margin: 0 auto 28px;
+            padding: 38px 42px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+        }
+
+        .report-text {
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            word-break: normal;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            line-height: 1.85;
+            color: inherit;
+        }
+
+        .report-visual {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .report-visual img {
             width: 100%;
             max-width: 950px;
-            border-radius: 12px;
+            height: auto;
             display: block;
             margin: 0 auto;
+            border-radius: 12px;
+        }
+
+        .bottom-buttons {
+            margin-top: 45px;
+            margin-bottom: 20px;
         }
 
         @media (max-width: 768px) {
-
             .project-page {
                 padding: 100px 20px 50px;
             }
@@ -162,22 +104,21 @@
                 font-size: 30px;
             }
 
-            .case-section h2 {
-                font-size: 24px;
+            .report-page {
+                padding: 25px 20px;
             }
 
+            .report-text {
+                font-size: 14px;
+                line-height: 1.75;
+            }
         }
-
     </style>
-
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
     <header>
-
         <nav class="navbar">
 
             <div class="logo">
@@ -185,43 +126,12 @@
             </div>
 
             <ul class="nav-links">
-
-                <li>
-                    <a href="https://nikhilshah15.github.io/portfolio/">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://nikhilshah15.github.io/portfolio/#about">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://nikhilshah15.github.io/portfolio/#skills">
-                        Skills
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://nikhilshah15.github.io/portfolio/#projects">
-                        Projects
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://nikhilshah15.github.io/portfolio/#certifications">
-                        Certifications
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://nikhilshah15.github.io/portfolio/#contact">
-                        Contact
-                    </a>
-                </li>
-
+                <li><a href="https://nikhilshah15.github.io/portfolio/">Home</a></li>
+                <li><a href="https://nikhilshah15.github.io/portfolio/#about">About</a></li>
+                <li><a href="https://nikhilshah15.github.io/portfolio/#skills">Skills</a></li>
+                <li><a href="https://nikhilshah15.github.io/portfolio/#projects">Projects</a></li>
+                <li><a href="https://nikhilshah15.github.io/portfolio/#certifications">Certifications</a></li>
+                <li><a href="https://nikhilshah15.github.io/portfolio/#contact">Contact</a></li>
             </ul>
 
             <div class="menu-btn">
@@ -229,679 +139,966 @@
             </div>
 
         </nav>
-
     </header>
 
-
-    <!-- ================= PROJECT PAGE ================= -->
 
     <main class="project-page">
 
         <a href="https://nikhilshah15.github.io/portfolio/#projects"
-            class="btn secondary back-button">
-
+           class="btn secondary back-button">
             ← Back to Projects
-
         </a>
 
-
-        <!-- ================= PROJECT HEADER ================= -->
 
         <section class="project-header">
 
             <h1>Olist Brazilian E-Commerce Analytics</h1>
 
-            <p>
-                An end-to-end e-commerce data analytics project analyzing
-                Brazilian marketplace data to understand sales performance,
-                customer behavior, delivery performance, product categories,
-                reviews and business trends.
-            </p>
-
-            <div class="project-tech">
-
-                <span>Python</span>
-                <span>SQL</span>
-                <span>Power BI</span>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= EXECUTIVE SUMMARY ================= -->
-
-        <section class="case-section">
-
-            <h2>1. Executive Summary</h2>
-
-            <p>
-                This project analyzes the Olist Brazilian E-Commerce dataset
-                to understand overall marketplace performance and identify
-                factors affecting sales, customer experience and operational
-                performance.
-            </p>
-
-            <p>
-                The analysis combines Python for data cleaning and exploratory
-                analysis, SQL for business-focused analysis and Power BI for
-                interactive visualization and dashboard development.
-            </p>
-
-            <p>
-                The analysis covers approximately
-                <strong>99,441 orders</strong> and examines sales,
-                customers, products, delivery performance, reviews,
-                payments and order trends.
-            </p>
-
-            <p>
-                Total merchandise sales analyzed were approximately
-                <strong>₹13.59M</strong>, with strong contributions from
-                categories such as Health & Beauty, Watches & Gifts and
-                Bed Bath & Table.
-            </p>
-
-        </section>
-
-
-        <!-- ================= OBJECTIVES ================= -->
-
-        <section class="case-section">
-
-            <h2>2. Project Objectives</h2>
-
-            <ul>
-
-                <li>
-                    Analyze overall sales and order performance.
-                </li>
-
-                <li>
-                    Identify the top-performing product categories.
-                </li>
-
-                <li>
-                    Understand customer and repeat-order behavior.
-                </li>
-
-                <li>
-                    Compare sales performance across Brazilian states.
-                </li>
-
-                <li>
-                    Analyze the relationship between delivery time and
-                    customer review scores.
-                </li>
-
-                <li>
-                    Identify sales and order trends over time.
-                </li>
-
-                <li>
-                    Analyze payment and customer behavior patterns.
-                </li>
-
-                <li>
-                    Translate analytical findings into actionable
-                    business recommendations.
-                </li>
-
-            </ul>
-
-        </section>
-
-
-        <!-- ================= DATA & METHODOLOGY ================= -->
-
-        <section class="case-section">
-
-            <h2>3. Data & Methodology</h2>
-
-            <h3>Data Used</h3>
-
-            <p>
-                The project uses multiple datasets from the Olist Brazilian
-                E-Commerce marketplace covering orders, customers, products,
-                order items, payments, reviews and product categories.
-            </p>
-
-            <table class="data-table">
-
-                <tr>
-                    <th>Dataset</th>
-                    <th>Records</th>
-                    <th>Purpose</th>
-                </tr>
-
-                <tr>
-                    <td>Orders</td>
-                    <td>99,441</td>
-                    <td>Order status, purchase and delivery analysis</td>
-                </tr>
-
-                <tr>
-                    <td>Order Items</td>
-                    <td>112,652</td>
-                    <td>Product sales and item-level analysis</td>
-                </tr>
-
-                <tr>
-                    <td>Customers</td>
-                    <td>99,443</td>
-                    <td>Customer and geographic analysis</td>
-                </tr>
-
-                <tr>
-                    <td>Products</td>
-                    <td>31,953</td>
-                    <td>Product and category analysis</td>
-                </tr>
-
-                <tr>
-                    <td>Category Translation</td>
-                    <td>72</td>
-                    <td>English product category names</td>
-                </tr>
-
-            </table>
-
-
-            <h3>Data Preparation</h3>
-
-            <p>
-                Python was used to clean and prepare the datasets for
-                analysis. Date columns were converted into datetime format,
-                datasets were merged using relevant keys and additional
-                analytical variables were created.
-            </p>
-
-            <p>
-                Delivery time was calculated using the difference between
-                the order purchase timestamp and the customer delivery
-                timestamp.
-            </p>
-
-            <p>
-                The delivery analysis showed a median delivery time of
-                <strong>10.22 days</strong> and an average delivery time
-                of approximately <strong>12.56 days</strong>.
-            </p>
-
-
-            <h3>Analytical Approach</h3>
-
-            <p>
-                Python was used for data cleaning, transformation,
-                exploratory analysis and statistical investigation.
-                SQL was used to answer business questions using joins,
-                aggregation, filtering and conditional analysis.
-                Power BI was then used to communicate the final insights
-                through an interactive business dashboard.
-            </p>
-
-            <p>
-                <strong>Workflow:</strong>
-                Raw Data → Python → SQL → Power BI → Insights →
-                Recommendations
-            </p>
-
-        </section>
-
-
-        <!-- ================= KEY FINDINGS ================= -->
-
-        <section class="case-section">
-
-            <h2>4. Key Findings & Visualizations</h2>
-
-
-            <!-- FINDING 1 -->
-
-            <h3>
-                Finding 1 — Product Categories Drive Different Levels of Sales
-            </h3>
-
-            <p>
-                Category-level analysis shows significant differences in
-                sales contribution across the marketplace.
-            </p>
-
-            <p>
-                Among the strongest-performing categories were
-                <strong>Health & Beauty</strong>,
-                <strong>Watches & Gifts</strong> and
-                <strong>Bed Bath & Table</strong>.
-            </p>
-
-            <p>
-                Health & Beauty generated approximately
-                <strong>₹1.26M</strong> in merchandise sales, followed by
-                Watches & Gifts at approximately <strong>₹1.21M</strong>
-                and Bed Bath & Table at approximately
-                <strong>₹1.04M</strong>.
-            </p>
-
-            <div class="visual-card">
-
-                <img
-                    src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-1.png"
-                    alt="Olist Product Category Analysis"
-                    class="finding-image">
-
-                <p class="visual-caption">
-                    Figure 1. Olist Product Category Sales Analysis
-                </p>
-
-            </div>
-
-
-            <!-- FINDING 2 -->
-
-            <h3>
-                Finding 2 — Sales Performance Varies Across Brazilian States
-            </h3>
-
-            <p>
-                Geographic analysis shows that sales are concentrated in
-                certain Brazilian states.
-            </p>
-
-            <p>
-                <strong>São Paulo</strong> recorded approximately
-                <strong>₹5.20M</strong> in sales, making it a major
-                contributor to overall marketplace revenue.
-            </p>
-
-            <p>
-                Comparing states using both total sales and average
-                sales per order provides a more complete view of
-                geographic performance.
-            </p>
-
-            <div class="visual-card">
-
-                <img
-                    src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-2.png"
-                    alt="Olist State Sales Analysis"
-                    class="finding-image">
-
-                <p class="visual-caption">
-                    Figure 2. Sales Performance Across Brazilian States
-                </p>
-
-            </div>
-
-
-            <!-- FINDING 3 -->
-
-            <h3>
-                Finding 3 — Longer Delivery Times Are Associated With Lower Reviews
-            </h3>
-
-            <p>
-                Delivery performance has a clear relationship with
-                customer satisfaction.
-            </p>
-
-            <p>
-                Average review scores decline as delivery time increases.
-                The average review score falls from approximately
-                <strong>4.45</strong> for orders delivered within
-                0–5 days to approximately <strong>3.35</strong> for
-                orders taking 25–29.145 days.
-            </p>
-
-            <p>
-                This indicates that longer delivery times represent an
-                important area for operational improvement and customer
-                experience management.
-            </p>
-
-            <div class="visual-card">
-
-                <img
-                    src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-3.png"
-                    alt="Olist Delivery Time and Review Analysis"
-                    class="finding-image">
-
-                <p class="visual-caption">
-                    Figure 3. Relationship Between Delivery Time and Review Scores
-                </p>
-
-            </div>
-
-
-            <!-- FINDING 4 -->
-
-            <h3>
-                Finding 4 — Repeat Customer Activity Increased Over Time
-            </h3>
-
-            <p>
-                The analysis of customer ordering behavior shows growth
-                in repeat-order activity over the observed period.
-            </p>
-
-            <p>
-                Repeat orders increased from approximately
-                <strong>36 in January 2017</strong> to
-                <strong>277 in February 2018</strong>.
-            </p>
-
-            <p>
-                This trend provides an opportunity to examine customer
-                retention, repeat purchasing patterns and cohort behavior
-                more closely.
-            </p>
-
-            <div class="visual-card">
-
-                <img
-                    src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-4.png"
-                    alt="Olist Repeat Customer Analysis"
-                    class="finding-image">
-
-                <p class="visual-caption">
-                    Figure 4. Repeat Customer and Order Trend Analysis
-                </p>
-
-            </div>
-
-
-            <!-- FINDING 5 -->
-
-            <h3>
-                Finding 5 — Sales and Order Volume Do Not Always Move Together
-            </h3>
-
-            <p>
-                Monthly analysis shows that sales value and order volume
-                do not always change at the same rate.
-            </p>
-
-            <p>
-                This highlights the importance of monitoring multiple
-                business metrics together rather than evaluating
-                performance using sales or order count alone.
-            </p>
-
-            <p>
-                Average order value and item-level performance can provide
-                additional context when investigating changes in overall
-                revenue.
-            </p>
-
-            <div class="visual-card">
-
-                <img
-                    src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-5.png"
-                    alt="Olist Sales and Order Trend Analysis"
-                    class="finding-image">
-
-                <p class="visual-caption">
-                    Figure 5. Sales, Orders and Business Performance Trends
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= DASHBOARD ================= -->
-
-        <section class="case-section">
-
-            <h2>5. Power BI Dashboard</h2>
-
-            <p>
-                The final Power BI dashboard brings together the project's
-                key business metrics and analytical findings into an
-                interactive reporting view.
-            </p>
-
-            <p>
-                The dashboard can be used to monitor sales performance,
-                order activity, customer behavior, product categories,
-                delivery performance and review-related insights.
-            </p>
+            <p>Customer, Sales &amp; Operational Performance</p>
 
             <div class="action-buttons">
 
-                <a
-                    href="https://drive.google.com/file/d/1MKdVmuZ5XEdy-tEu9iVuPNwPeUfFf9N1/view?usp=sharing"
-                    target="_blank"
-                    class="btn primary">
-
-                    View Power BI Dashboard
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= RECOMMENDATIONS ================= -->
-
-        <section class="case-section">
-
-            <h2>6. Actionable Recommendations</h2>
-
-
-            <div class="recommendation-card">
-
-                <h3>1. Monitor Category Performance</h3>
-
-                <p>
-                    Track category performance using total sales,
-                    item volume and average item value together to
-                    identify categories that are contributing the most
-                    to overall marketplace performance.
-                </p>
-
-            </div>
-
-
-            <div class="recommendation-card">
-
-                <h3>2. Investigate Long Delivery Times</h3>
-
-                <p>
-                    Orders with extended delivery times should be
-                    monitored closely because longer delivery periods
-                    are associated with lower customer review scores.
-                </p>
-
-            </div>
-
-
-            <div class="recommendation-card">
-
-                <h3>3. Evaluate Geographic Performance</h3>
-
-                <p>
-                    Analyze states using both total sales and
-                    average sales per order to distinguish between
-                    high-volume markets and markets with higher
-                    order value.
-                </p>
-
-            </div>
-
-
-            <div class="recommendation-card">
-
-                <h3>4. Monitor Sales, Orders and Average Order Value Together</h3>
-
-                <p>
-                    Monthly business performance should be evaluated
-                    using sales, order volume and average order value
-                    together to better understand changes in marketplace
-                    performance.
-                </p>
-
-            </div>
-
-
-            <div class="recommendation-card">
-
-                <h3>5. Strengthen Customer Retention Analysis</h3>
-
-                <p>
-                    Growing repeat-order activity provides an opportunity
-                    to use cohort and retention analysis to understand
-                    customer purchasing behavior and identify opportunities
-                    to increase repeat purchases.
-                </p>
-
-            </div>
-
-
-            <div class="recommendation-card">
-
-                <h3>6. Monitor Customer Experience</h3>
-
-                <p>
-                    Delivery performance and review scores should be
-                    monitored together so that operational issues affecting
-                    customer satisfaction can be identified earlier.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= CONCLUSION ================= -->
-
-        <section class="case-section">
-
-            <h2>7. Conclusion</h2>
-
-            <p>
-                The Olist analysis provides a detailed view of Brazilian
-                e-commerce marketplace performance across sales, products,
-                customers, geography, delivery and reviews.
-            </p>
-
-            <p>
-                The analysis identified strong category and geographic
-                differences, with Health & Beauty, Watches & Gifts and
-                Bed Bath & Table among the major sales contributors and
-                São Paulo representing a major geographic market.
-            </p>
-
-            <p>
-                Delivery performance also emerged as an important customer
-                experience factor, with average review scores decreasing
-                as delivery time increased.
-            </p>
-
-            <p>
-                The growth in repeat-order activity highlights the
-                importance of customer retention and cohort analysis,
-                while differences between sales and order trends show
-                why multiple KPIs should be monitored together.
-            </p>
-
-            <p>
-                Overall, the project converts raw e-commerce data into
-                practical business insights that can support decisions
-                around <strong>product performance, geographic markets,
-                delivery operations, customer experience and retention</strong>.
-            </p>
-
-        </section>
-
-
-        <!-- ================= PROJECT FILES ================= -->
-
-        <section class="case-section">
-
-            <h2>Project Files</h2>
-
-            <div class="action-buttons">
-
-                <!-- Business Report -->
-
-                <a
-                    href="https://github.com/NikhilShah15/nikhil-portfolio/blob/main/assets/projects/olist/Reports/Olist_Ecommerce_Analysis_Report.pdf"
-                    target="_blank"
-                    class="btn primary">
-
-                    Business Report
-
-                </a>
-
-
-                <!-- Python Analysis -->
-
-                <a
-                    href="https://github.com/NikhilShah15/nikhil-portfolio/blob/main/assets/projects/olist/Python/Olist_Ecommerce_Analysis.ipynb"
-                    target="_blank"
-                    class="btn secondary">
-
-                    Python Analysis
-
-                </a>
-
-
-                <!-- SQL Analysis -->
-
-                <a
-                    href="https://github.com/NikhilShah15/nikhil-portfolio/blob/main/assets/projects/olist/SQL/Olist_Ecommerce_Analysis.sql"
-                    target="_blank"
-                    class="btn secondary">
-
-                    SQL Analysis
-
-                </a>
-
-
-                <!-- Power BI Dashboard -->
-
-                <a
-                    href="https://drive.google.com/file/d/1MKdVmuZ5XEdy-tEu9iVuPNwPeUfFf9N1/view?usp=sharing"
-                    target="_blank"
-                    class="btn secondary">
-
-                    Power BI Dashboard
-
-                </a>
-
-
-                <!-- GitHub -->
-
-                <a
-                    href="https://github.com/NikhilShah15/nikhil-portfolio/tree/main/assets/projects/olist"
-                    target="_blank"
-                    class="btn secondary">
-
+                <a href="https://github.com/NikhilShah15/nikhil-portfolio/tree/main/assets/projects/olist"
+                   target="_blank"
+                   class="btn secondary">
                     GitHub Project
+                </a>
 
+                <a href="https://github.com/NikhilShah15/nikhil-portfolio/blob/main/assets/projects/olist/Python/Olist_Ecommerce_Analysis.ipynb"
+                   target="_blank"
+                   class="btn secondary">
+                    Python Analysis
+                </a>
+
+                <a href="https://github.com/NikhilShah15/nikhil-portfolio/blob/main/assets/projects/olist/SQL/Olist_Ecommerce_Analysis.sql"
+                   target="_blank"
+                   class="btn secondary">
+                    SQL Analysis
+                </a>
+
+                <a href="https://drive.google.com/file/d/1MKdVmuZ5XEdy-tEu9iVuPNwPeUfFf9N1/view?usp=sharing"
+                   target="_blank"
+                   class="btn primary">
+                    Power BI Dashboard
+                </a>
+
+                <a href="https://github.com/NikhilShah15/nikhil-portfolio/tree/main/assets/projects/olist/Reports"
+                   target="_blank"
+                   class="btn secondary">
+                    Technical Summary
                 </a>
 
             </div>
 
         </section>
+
+
+        <section class="report">
+
+            <div class="report-page">
+                <div class="report-text">OLIST BRAZILIAN E-COMMERCE ANALYTICS
+Customer, Sales &amp; Operational Performance ​
+Prepared by Nikhil Shah
+
+
+
+1. Executive Summary
+Business Context
+
+Olist operates an e-commerce marketplace where business performance depends on product demand,
+customer purchasing behavior, geographic markets and the delivery experience.
+
+The purpose of this analysis is to identify the major patterns affecting commercial performance and
+customer experience and translate them into decisions that can improve how the marketplace is
+monitored and managed.
+
+What the Analysis Found
+
+The analysis identified five major themes.
+
+Category performance is driven by different sales mechanisms.​
+ Health &amp; Beauty generated approximately ₹1.26M in merchandise sales, while Watches &amp; Gifts
+generated approximately ₹1.21M. However, the categories achieve similar sales through different
+combinations of item volume and item value. This means category performance should not be evaluated
+through sales alone.
+
+Delivery experience is closely associated with customer feedback.​
+Average review scores decline from 4.45 for deliveries completed within 0–5 days to 3.35 for deliveries
+between 25–29.145 days. The pattern remains negative after extreme delivery observations are
+excluded. Long-delivery segments therefore represent an important area for operational investigation.
+
+The largest sales market is not necessarily the highest-value market per order.​
+ São Paulo generates approximately ₹5.20M in sales and has the largest order base, while states such
+as Bahia record higher average sales per order. Geographic decisions therefore require both market
+scale and order-value perspectives.
+
+Sales growth cannot be understood from order volume alone.​
+ There are periods where sales increase despite fewer orders and periods where orders increase while
+sales decline. Average order value therefore provides important context for understanding changes in
+revenue.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">Repeated purchasing is increasing, but repeat orders should not automatically be interpreted as
+retention.​
+ Repeated-order volume rises substantially across the observed period. This creates a clear opportunity
+to develop more formal cohort-based retention measurement.
+
+Recommended Business Actions
+
+   1.​ Monitor category performance using sales, item volume and average item value together.
+   2.​ Investigate the operational drivers of long delivery times.
+   3.​ Evaluate states using both total sales and average sales per order.
+   4.​ Monitor sales, order volume and average order value together.
+   5.​ Develop cohort-based retention metrics to measure repeat customer behavior more rigorously.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">2. Business Objective
+The analysis was undertaken to answer six business questions:
+
+   1.​ Which product categories are performing best?
+   2.​ Which states show the strongest sales performance?
+   3.​ Does delivery time relate to customer review scores?
+   4.​ How are sales changing over time?
+   5.​ How are new and repeated orders changing?
+   6.​ What factors are associated with changes in sales and order volume?
+
+These questions form the complete analytical backbone of the project.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">3. Business Questions
+
+
+Question 1
+
+ Which product categories are performing best?
+Problem
+
+The business needs to understand which product categories contribute most to sales and whether strong
+performance is driven by high purchase volume, higher product value, or both. This is important
+because inventory and promotional decisions should reflect how each category actually generates
+revenue.
+
+Answer
+
+Health &amp; Beauty is the highest-performing category by total sales, generating approximately
+₹1.26M. It is followed by Watches &amp; Gifts at ₹1.21M and Bed Bath &amp; Table at ₹1.04M.
+
+The complete dataset generated approximately ₹13.59M in merchandise sales, so Health &amp; Beauty
+alone contributed about 9.3% of total sales, while Watches &amp; Gifts contributed about 8.9%.
+
+However, the sales leaders are not performing in the same way. Bed Bath &amp; Table sold the highest
+number of items at 11,115, while Watches &amp; Gifts sold 5,991 items but had an average item price of
+approximately ₹201, compared with about ₹93 for Bed Bath &amp; Table.
+
+Analysis
+
+Category performance was analyzed using total sales, items sold, average item price, and average sales
+per order.
+
+Health &amp; Beauty generated ₹1.26M from 9,670 items, making it the largest contributor to category sales.
+
+Watches &amp; Gifts generated ₹1.21M from 5,991 items. Although it sold about 3,679 fewer items than
+Health &amp; Beauty, its higher item value allowed it to generate almost the same level of sales.
+
+Bed Bath &amp; Table generated ₹1.04M, but achieved this through the highest item volume of 11,115 items.
+Its average item price was approximately ₹93, substantially lower than Watches &amp; Gifts.
+
+This demonstrates that category performance is driven by different combinations of volume and value
+rather than one common factor.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">Insight
+
+Observation: Health &amp; Beauty generated the highest sales at ₹1.26M, while Bed Bath &amp; Table
+generated the highest item volume at 11,115 and Watches &amp; Gifts generated ₹1.21M despite selling only
+5,991 items.
+
+Reason: Health &amp; Beauty combines strong demand with meaningful item value, Bed Bath &amp; Table relies
+more heavily on sales volume, while Watches &amp; Gifts generates substantial revenue from higher-value
+products.
+
+Impact: Managing all three categories using the same inventory or promotional strategy could miss the
+reason each category is contributing strongly to revenue.
+
+Recommendation
+
+    ●​ Prioritize inventory availability for Health &amp; Beauty, because its ₹1.26M contribution makes it
+       the largest category-level revenue source.
+    ●​ For Bed Bath &amp; Table, identify the highest-selling products within the 11,115 items sold and
+       prioritize their stock availability, because the category&#x27;s performance is strongly volume-driven.
+    ●​ For Watches &amp; Gifts, identify the products responsible for the category&#x27;s higher item value and
+       prioritize their availability and relevant promotions, rather than focusing only on increasing unit
+       volume.
+    ●​ Use the top-selling SKUs within each major category as the operational inventory and
+       promotion list instead of applying one strategy to the entire category.
+
+
+
+Question 2
+
+ Which states show the strongest sales performance?
+Problem
+
+The business operates across multiple states, but sales are not distributed evenly. Understanding where
+revenue is concentrated and where customers generate higher order values can help determine how
+different markets should be managed.
+
+Answer
+
+São Paulo (SP) is the strongest state by total sales, generating approximately ₹5.20M from 41,375
+orders.
+
+This represents roughly 38.3% of the ₹13.59M total merchandise sales in the analysis.
+
+São Paulo is also substantially ahead of the next-largest states: Rio de Janeiro generated ₹1.82M and
+Minas Gerais generated ₹1.59M.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">However, São Paulo does not have the highest average sales per order. Bahia recorded
+approximately ₹152.28 per order, compared with ₹125.75 in São Paulo.
+
+Therefore, São Paulo is the largest market by scale, while some smaller states generate greater value
+per order.
+
+Analysis
+
+State performance was evaluated using total sales, order count, and average sales per order.
+
+São Paulo recorded approximately 41,375 orders, compared with 12,762 in Rio de Janeiro and 11,544
+in Minas Gerais.
+
+Its ₹5.20M sales therefore come from a very large order base.
+
+The average-sales-per-order analysis gives a different perspective. Bahia generated approximately
+₹152.28 per order, while Santa Catarina generated ₹144.12 and Goiás ₹146.78.
+
+This means a state can have lower total sales while still showing stronger customer spending on an
+individual order.
+
+Insight
+
+Observation: São Paulo generated ₹5.20M, approximately 38.3% of total merchandise sales, while
+Bahia generated a higher average sales per order of ₹152.28 compared with São Paulo&#x27;s ₹125.75.
+
+Reason: São Paulo&#x27;s overall sales leadership is primarily associated with its much larger order volume,
+whereas some smaller markets generate more value from each order.
+
+Impact: Geographic performance should not be evaluated only by total sales. A high-volume market and
+a high-order-value market present different operational opportunities.
+
+Recommendation
+
+    ●​ Protect São Paulo&#x27;s existing sales base by prioritizing availability of the products and
+       categories already generating the highest sales in the state.
+    ●​ For Bahia, Santa Catarina, and Goiás, identify the categories and products behind their higher
+       average order values and use those products for targeted promotions and availability planning.
+    ●​ Use a volume-focused strategy in São Paulo, where maintaining availability across
+       high-demand products can protect a ₹5.20M sales base.
+    ●​ Use a basket-value strategy in higher-value states, focusing on products that are already
+       generating larger orders.
+    ●​ Before increasing inventory or promotional spending in a state, identify its top-selling products
+       and categories so investment is directed toward demonstrated demand.
+
+.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">Question 3
+
+Does delivery time relate to customer review scores?
+Problem
+
+Delivery performance is an important part of the customer experience. The business needs to
+understand whether longer delivery times are associated with lower customer satisfaction and where
+delivery performance requires attention.
+
+Answer
+
+Yes. Longer delivery times are associated with progressively lower average review scores.
+
+The average review score falls from 4.45 for orders delivered within 0–5 days to 3.35 for orders
+taking 25–29.145 days.
+
+That is a 1.10-point difference in average review score.
+
+The relationship is also reflected in the correlation analysis: the overall correlation was approximately
+-0.33. After excluding delivery-time values above the calculated outlier boundary of 29.145 days, the
+correlation weakened to approximately -0.17.
+
+This means unusually long deliveries contribute to the overall relationship, but the downward pattern
+remains across the normal analyzed delivery ranges.
+
+Analysis
+
+Delivery time was calculated from the order purchase timestamp to the actual customer delivery date.
+
+Across the analyzed delivered orders:
+
+    ●​   Mean delivery time: 12.56 days
+    ●​   Median delivery time: 10.22 days
+    ●​   75% of orders were delivered within approximately 15.72 days
+    ●​   90% were delivered within approximately 23.10 days
+
+Orders were then grouped into delivery-time buckets and compared with their average review scores.
+
+The pattern was consistent:
+
+    ●​   0–5 days → 4.45
+    ●​   5–10 days → 4.36
+    ●​   10–15 days → 4.27
+    ●​   15–20 days → 4.13
+    ●​   20–25 days → 3.87
+    ●​   25–29.145 days → 3.35</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">The analysis therefore shows a clear downward association between longer delivery times and customer
+review scores.
+
+Insight
+
+Observation: Average review scores decline from 4.45 in the 0–5 day range to 3.35 in the 25–29.145
+day range.
+
+Reason: The data shows a consistent association between longer delivery times and lower customer
+ratings. However, delivery time is not the only factor that can influence a customer&#x27;s review.
+
+Impact: Long-delivery orders represent a customer-experience risk. The difference between 4.45 and
+3.35 suggests that the highest-delay orders deserve operational attention.
+
+Recommendation
+
+    ●​ Create an operational exception list for orders approaching or exceeding 20 days, because
+       review scores fall to approximately 3.87 in the 20–25 day range and 3.35 in the 25–29.145 day
+       range.
+    ●​ Break those delayed orders down by state, seller, and product category to identify where the
+       delays are concentrated.
+    ●​ Prioritize intervention for segments showing both high delivery time and low review scores
+       rather than treating every delayed order equally.
+    ●​ Track delivery time and review score together as customer-experience KPIs.
+    ●​ After interventions are introduced, compare the number of long-delivery orders and average
+       review scores over time to determine whether the operational changes are improving the
+       customer experience.
+
+
+
+Question 4
+
+How are sales changing over time?
+Problem
+
+The business needs to understand its sales trajectory, identify periods of strong performance, and
+determine whether changes in revenue are driven only by order volume or also by the value and
+composition of orders.
+
+Answer
+
+Sales show a strong upward trend through 2017, followed by consistently high monthly sales during
+the available 2018 period.
+
+Monthly sales increased from approximately ₹120K in January 2017 to ₹664K in October 2017, before
+reaching the highest recorded month of approximately ₹1.01M in November 2017.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">Sales remained close to the ₹1M level in several 2018 months:
+
+    ●​ March 2018: ₹983K
+    ●​ April 2018: ₹997K
+    ●​ May 2018: ₹997K
+
+The beginning and end of the dataset contain partial months, so these should not be interpreted as
+normal full-month sales declines.
+
+Analysis
+
+Monthly sales were calculated using merchandise prices from order items and the purchase month of
+each order.
+
+The dataset shows substantial growth during 2017. Sales increased from ₹120K in January to ₹247K in
+February, ₹374K in March, and ₹506K in May.
+
+Sales continued increasing through much of the year, reaching ₹574K in August, ₹624K in September,
+and ₹664K in October.
+
+November 2017 then reached approximately ₹1.01M, the highest monthly sales value in the dataset.
+
+Sales remained strong in 2018, with several months close to ₹1M.
+
+However, sales and order volume did not always move together. From August to September 2017,
+orders fell slightly from 4,331 to 4,285, while sales increased by approximately ₹50.4K.
+
+
+
+
+Insight
+
+Observation: Monthly sales increased from ₹120K in January 2017 to ₹1.01M in November 2017 and
+remained close to ₹1M in several 2018 months.
+
+Reason: Sales generally move with order volume, but periods such as August–September 2017 show
+that changes in order value and category composition can also increase revenue even when the number
+of orders falls.
+
+Impact: The business should not use order count alone to judge sales performance. Revenue can
+increase through higher-value orders even without an increase in order volume.
+
+Recommendation
+
+    ●​ Monitor total sales, order volume, and average sales per order together each month.
+    ●​ When sales rise while order volume falls, identify the categories and products generating the
+       higher-value orders and protect their availability.
+    ●​ When order volume rises but sales fall, investigate whether customers are shifting toward
+       lower-value products or categories.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">   ●​ Compare the category mix of strong and weak months to identify which categories are
+       responsible for meaningful revenue changes.
+    ●​ Use high-performing periods such as November 2017&#x27;s ₹1.01M as benchmarks for
+       understanding what category and order-value combinations supported stronger sales.
+
+
+Question 5
+
+How are new and repeated orders changing?
+Problem
+
+Order growth can come from acquiring new customers or encouraging existing customers to purchase
+again. The business needs to understand how these two sources of orders are changing over time.
+
+
+Answer
+
+Repeated-order volume increased substantially over the observed period, while new customers
+continued to represent the majority of monthly orders.
+
+Repeated orders increased from just 36 in January 2017 to 104 in May, 155 in September, and 240 in
+November 2017.
+
+The increase continued into 2018, reaching 244 repeated orders in January and 277 in February
+2018.
+
+This shows increasing repeat-order activity, but the analysis does not prove that overall customer
+retention improved because repeat-order volume can also rise as the overall customer base becomes
+larger.
+
+Analysis
+
+Customer purchase history was analyzed using customer_unique_id to identify whether an order
+belonged to a customer&#x27;s first purchase or a subsequent purchase.
+
+Each customer&#x27;s earliest purchase was identified and later orders from the same customer were
+classified as repeated orders.​
+The number of repeated orders increased considerably:
+
+    ●​   January 2017 → 36
+    ●​   May 2017 → 104
+    ●​   September 2017 → 155
+    ●​   November 2017 → 240
+    ●​   January 2018 → 244
+    ●​   February 2018 → 277</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">At the same time, new customers remained the larger source of monthly orders.
+
+For example, in August 2017 there were 4,184 new orders and 147 repeated orders, meaning
+repeated orders represented approximately 3.4% of the 4,331 total orders that month.
+
+Insight
+
+Observation: Repeated orders increased from 36 in January 2017 to 277 in February 2018, but new
+customers continued to generate the majority of orders.
+
+Reason: The marketplace is receiving orders from both newly acquired customers and customers
+returning after a previous purchase. The growing number of repeated orders indicates increasing
+repeat-purchase activity, although it does not by itself establish a higher retention rate.
+
+Impact: The business has two sources of order growth: continued customer acquisition and repeat
+purchasing. Understanding both is necessary for sustainable customer growth.
+
+Recommendation
+
+    ●​ Separate acquisition and retention strategies instead of treating all customers as one group.
+    ●​ For existing customers, analyze their previous product and category purchases and use those
+       patterns to create relevant follow-up offers, cross-selling opportunities, or replenishment
+       reminders.
+    ●​ Identify categories with stronger repeat purchasing and prioritize those categories for retention
+       campaigns.
+    ●​ Track repeat-customer rate in addition to repeat-order volume, so growth is measured based
+       on customer behavior rather than order count alone.
+    ●​ Measure whether customers exposed to retention actions actually return for another purchase
+       and use that result to refine future campaigns.
+
+
+Question 6
+
+What factors are associated with changes in sales and
+order volume?
+Problem
+
+Sales and order volume generally move together, but not always. The business needs to understand
+what is happening when revenue and order volume move in different directions so that the correct
+operational response can be taken.
+
+Answer
+
+Order volume is an important factor associated with sales, but it does not fully explain revenue
+changes.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">Most months show sales and order volume moving together, but several periods demonstrate the
+importance of order value and category composition:
+
+    ●​ From August to September 2017, orders decreased by 46, from 4,331 to 4,285, while sales
+       increased by approximately ₹50.4K.
+    ●​ From March to April 2018, orders decreased by 272, from 7,211 to 6,939, while sales increased
+       by approximately ₹13.4K.
+    ●​ From July to August 2018, orders increased by 220, from 6,292 to 6,512, while sales decreased
+       by approximately ₹40.8K.
+
+These examples demonstrate that more orders do not always mean more sales, and fewer orders
+do not always mean lower sales.
+
+Analysis
+
+Monthly sales and order volume were compared to identify whether both measures moved in the same
+direction.
+
+Most months showed a positive relationship between sales and orders, indicating that order volume is an
+important component of revenue performance.
+
+However, the exceptions provide important business information.
+
+In August–September 2017, the business received 46 fewer orders but generated ₹50.4K more sales.
+This means the value generated per order increased.
+
+Similarly, March–April 2018 saw 272 fewer orders but ₹13.4K higher sales.
+
+The opposite pattern occurred in July–August 2018: orders increased by 220, but sales fell by
+approximately ₹40.8K.
+
+Category-level analysis of these periods showed that several major categories remained among the top
+contributors, while their individual sales values changed. Therefore, the composition and value of orders
+matter alongside order volume.
+
+Insight
+
+Observation: Sales and order volume generally move together, but the August–September 2017,
+March–April 2018, and July–August 2018 periods show that the two measures can move in opposite
+directions.
+
+Reason: Changes in average order value and category-level sales can offset changes in order volume.
+A smaller number of higher-value orders can generate more revenue, while a larger number of
+lower-value orders can generate less.
+
+Impact: Looking only at order volume can lead to an incorrect interpretation of revenue performance and
+potentially result in the wrong business action.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">Recommendation
+
+  ●​ Monitor total sales, order volume, and average sales per order together as the core monthly
+     revenue indicators.
+  ●​ When orders increase but sales decrease, identify the categories and products responsible for
+     the lower-value orders and check whether high-value categories are losing sales share.
+  ●​ When orders decrease but sales increase, identify the products and categories responsible for
+     the higher-value orders and protect their inventory availability.
+  ●​ For significant month-to-month changes, compare the top category and product mix before
+     deciding whether the appropriate response is inventory, promotion, or category-level intervention.
+  ●​ Use the analysis to distinguish between three situations: insufficient demand volume, lower
+     order value, or changing category mix. Each requires a different action rather than
+     automatically increasing promotions or inventory.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">4. Consolidated Business Recommendations
+4.1 Protect High-Value Revenue Sources
+
+The analysis shows that ₹13.59M in merchandise sales were generated across the dataset, with Health
+&amp; Beauty contributing ₹1.26M (9.3%) and São Paulo contributing ₹5.20M (38.3%) of total sales. These
+areas represent significant existing revenue sources.
+
+Action: Maintain strong inventory availability for the highest-selling products in Health &amp; Beauty and in
+São Paulo. Product-level stock planning should prioritize items that already demonstrate strong sales
+rather than distributing inventory equally across all products and markets.
+
+
+
+
+4.2 Manage Categories According to How They Generate Revenue
+
+The category analysis showed different performance patterns. Bed Bath &amp; Table sold 11,115 items, the
+highest volume, while Watches &amp; Gifts generated ₹1.21M from 5,991 items, supported by a much
+higher average item value.
+
+Action: Use different category strategies instead of treating all high-performing categories equally.
+Maintain stock depth for high-volume categories such as Bed Bath &amp; Table, while protecting availability
+and targeted promotion of higher-value products within categories such as Watches &amp; Gifts.
+
+
+
+
+4.3 Reduce Exposure to Long Delivery Times
+
+Average review scores declined from 4.45 for 0–5 day deliveries to 3.35 for 25–29.145 day deliveries,
+a difference of 1.10 points.
+
+Action: Monitor orders approaching longer delivery ranges, particularly those exceeding approximately
+20 days, and investigate the states, sellers, and categories responsible for these delays. The objective
+should be to reduce the number of severely delayed orders and monitor whether review scores improve
+alongside delivery performance.
+
+
+
+
+4.4 Use Both Customer Acquisition and Repeat Purchasing
+
+Repeated orders increased from 36 in January 2017 to 277 in February 2018, while new customers
+continued to represent the majority of orders.
+
+Action: Maintain customer-acquisition activity while developing a separate retention strategy for existing
+customers. Use previous purchase categories and products to identify relevant cross-selling,
+replenishment, or follow-up opportunities, and measure success through repeat-customer behavior
+rather than repeat-order volume alone.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">4.5 Monitor Revenue Through Sales, Orders, and Order Value Together
+
+The analysis showed that sales and order volume usually move together, but not always. From July to
+August 2018, orders increased by 220, while sales decreased by approximately ₹40.8K. Conversely,
+from August to September 2017, orders decreased by 46, while sales increased by approximately
+₹50.4K.
+
+Action: Track total sales, order volume, and average sales per order together. When these
+measures move in different directions, investigate the category and product mix before deciding whether
+the appropriate response is additional inventory, targeted promotion, or protection of high-value products.
+
+
+
+
+4.6 Prioritize Decisions Using Evidence Rather Than Equal Allocation
+
+The analysis shows substantial differences across categories, states, delivery performance, and
+customer behavior. For example, São Paulo generated ₹5.20M, while Bahia generated a higher average
+sales value per order of ₹152.28 compared with São Paulo&#x27;s ₹125.75.
+
+Action: Allocate operational attention according to the specific business situation: protect high-volume
+revenue markets, investigate high-value markets for expansion opportunities, maintain stock for proven
+high-demand products, and prioritize operational intervention where delivery performance is weakest.
+
+
+
+
+Overall Business Direction
+The analysis indicates that the business should focus on protecting existing high-value revenue,
+managing products and markets according to their actual sales behavior, reducing exposure to
+long delivery times, and developing repeat purchasing alongside new-customer acquisition.
+
+The key principle is to avoid treating the entire marketplace in the same way. The data shows that
+different categories, states, customer groups, and delivery segments behave differently, so
+operational actions should be targeted according to the evidence.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">5. Dashboard &amp; Decision Support
+The Power BI dashboard was developed to convert the analysis into an interactive decision-support tool.
+The five dashboard pages bring together the key measures identified throughout the analysis, allowing
+business users to move from overall performance to category, customer, delivery, and payment-level
+details.
+
+
+
+
+5.1 Executive Overview
+The Olist E-Commerce Executive Overview provides a consolidated view of the business through total
+sales, total orders, active customers, and average order value.
+
+The dashboard supports the overall finding of approximately ₹13.59M in merchandise sales across the
+analyzed order-item data. It also highlights the concentration of sales across categories and states,
+including ₹1.26M from Health &amp; Beauty and approximately ₹5.20M from São Paulo.
+
+The monthly sales trend allows users to observe the increase in sales over time, including the peak of
+approximately ₹1.01M in November 2017.
+
+Business use: Management can use this page to quickly assess overall business performance and
+identify the categories, states, and periods contributing most to sales before moving into more detailed
+analysis.</div>
+
+                <div class="report-visual">
+                    <img src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-1.png"
+                         alt="Figure 1"
+                         loading="lazy">
+                    <div>Figure 1. Olist E-Commerce Executive Overview — Power BI Dashboard</div>
+                </div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">5.2 Product &amp; Sales Analysis
+The Product &amp; Sales Analysis page examines category performance through three different measures:
+
+    ●​ Total sales
+    ●​ Items sold
+    ●​ Average item price
+
+This view reflects the finding that categories generate revenue through different combinations of volume
+and value.
+
+For example, Bed Bath &amp; Table sold 11,115 items and generated approximately ₹1.04M, while
+Watches &amp; Gifts generated approximately ₹1.21M from 5,991 items. Comparing these measures
+helps explain why two categories with different sales volumes can still generate similar levels of revenue.
+
+Business use: Category managers can use the page to identify whether a category requires a
+volume-focused or value-focused approach, supporting more targeted inventory and promotional
+decisions.</div>
+
+                <div class="report-visual">
+                    <img src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-2.png"
+                         alt="Figure 2"
+                         loading="lazy">
+                    <div>Figure 2. Olist Product &amp; Sales Analysis — Power BI Dashboard</div>
+                </div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">5.3 Customer &amp; Order Analysis
+The Customer &amp; Order Analysis page examines order activity from both customer and time
+perspectives.
+
+The dashboard separates new and repeated orders, allowing users to monitor the same
+customer-behavior pattern identified in the analysis. Repeated-order volume increased from 36 orders
+in January 2017 to 277 in February 2018, while new customers continued to account for the majority of
+monthly orders.
+
+The page also shows order distribution by day of the week and customer state, providing additional
+ways to identify where order activity is concentrated.
+
+Business use: Management can monitor whether order activity is being generated primarily by new or
+returning customers and identify states or periods where customer-order activity requires further
+investigation.</div>
+
+                <div class="report-visual">
+                    <img src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-3.png"
+                         alt="Figure 3"
+                         loading="lazy">
+                    <div>Figure 3. Olist Customer &amp; Order Analysis — Power BI Dashboard</div>
+                </div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">5.4 Delivery &amp; Customer Experience
+The Delivery &amp; Customer Experience page connects delivery performance with customer review
+scores.
+
+The main visualization reflects the relationship identified in the analysis: average review scores declined
+from 4.45 for deliveries within 0–5 days to 3.35 for deliveries taking 25–29.145 days.
+
+The page also compares average delivery time across states with more than 300 analyzed orders,
+preventing very small state samples from dominating the comparison.
+
+The delivery-time distribution provides additional context by showing how many analyzed orders fall into
+each delivery-time range.
+
+Business use: Operations teams can use this page to identify longer delivery segments and investigate
+the states or operational areas where delivery performance may require attention.</div>
+
+                <div class="report-visual">
+                    <img src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-4.png"
+                         alt="Figure 4"
+                         loading="lazy">
+                    <div>Figure 4. Olist Delivery &amp; Customer Experience — Power BI Dashboard</div>
+                </div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">5.5 Payment &amp; Revenue Analysis
+The Payment &amp; Revenue Analysis page provides an additional view of customer payment behavior
+through:
+
+    ●​   Payment value by payment method
+    ●​   Payment value by installment count
+    ●​   Multiple-payment orders over time
+    ●​   Total sales
+    ●​   Payment revenue
+    ●​   Average payment per order
+
+This page complements the merchandise-sales analysis by showing how customer payments are
+distributed across payment methods and installment behavior.
+
+The multiple-payment view also allows management to observe changes in the number of orders
+involving more than one payment over the available period.
+
+Business use: The page can support monitoring of payment behavior and help identify payment
+patterns that may require further investigation.</div>
+
+                <div class="report-visual">
+                    <img src="https://raw.githubusercontent.com/NikhilShah15/nikhil-portfolio/main/assets/projects/olist/Visuals/page-5.png"
+                         alt="Figure 5"
+                         loading="lazy">
+                    <div>Figure 5. Olist Payment &amp; Revenue Analysis — Power BI Dashboard</div>
+                </div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">5.6 Dashboard as a Decision-Support Tool
+The dashboard is structured to move from overall business performance to specific operational
+areas:
+
+Executive Overview → Product &amp; Sales → Customer &amp; Orders → Delivery &amp; Customer Experience
+→ Payment &amp; Revenue
+
+Each page supports findings established through the underlying analysis rather than introducing
+unsupported conclusions.
+
+For example:
+
+    ●​ The Executive Overview highlights the ₹13.59M overall merchandise sales and major sales
+       contributors.
+    ●​ Product analysis explains the different ways categories such as Health &amp; Beauty, Bed Bath &amp;
+       Table, and Watches &amp; Gifts generate revenue.
+    ●​ Customer analysis tracks the increase in repeated orders from 36 to 277.
+    ●​ Delivery analysis highlights the 4.45 to 3.35 review-score difference across delivery-time
+       ranges.
+    ●​ Payment analysis provides additional visibility into how customers complete their purchases.
+
+The dashboard therefore allows decision-makers to move from “What is happening?” to “Where is it
+happening?” and then “What should we investigate or act on?”
+
+The dashboard itself does not establish causality. Its purpose is to make the analyzed metrics
+interactive, comparable, and easier to monitor, while the business recommendations remain
+grounded in the evidence established through the analysis.
+
+Decision-Support Value
+
+The dashboard can help the business:
+
+    ●​   Protect high-performing revenue sources by monitoring major categories and markets.
+    ●​   Prioritize products and categories based on sales volume and value.
+    ●​   Monitor repeat-order activity alongside new-customer orders.
+    ●​   Identify longer delivery segments that warrant operational investigation.
+    ●​   Monitor payment behavior and changes in multiple-payment orders.
+    ●​   Investigate unusual movements in sales and order volume before deciding on inventory or
+         promotional actions.</div>
+            </div>
+
+
+            <div class="report-page">
+                <div class="report-text">6. Conclusion
+The analysis provides an overall view of sales performance, customer behavior, product categories,
+geographic markets, delivery experience, and payment activity within the Olist e-commerce business.
+
+The business generated approximately ₹13.59M in merchandise sales, with significant contributions
+from Health &amp; Beauty (₹1.26M) and São Paulo (₹5.20M). Category and state-level analysis also
+showed that strong performance can come from different sources, including higher sales volume and
+higher value per order.
+
+Customer experience represents an important operational area. Average review scores declined from
+4.45 for orders delivered within 0–5 days to 3.35 for orders taking 25–29.145 days, indicating an
+association between longer delivery times and lower customer ratings. This provides a basis for
+monitoring and investigating longer-delivery segments.
+
+Customer behavior also showed increasing repeat-order activity, with repeated orders rising from 36 in
+January 2017 to 277 in February 2018, while new customers continued to represent the majority of
+orders. This indicates that both customer acquisition and repeat purchasing are relevant to order growth.
+
+The analysis further shows that sales performance cannot be assessed through order volume alone. For
+example, between August and September 2017, orders decreased by 46 while sales increased by
+approximately ₹50.4K, whereas between July and August 2018, orders increased by 220 while
+sales decreased by approximately ₹40.8K. This highlights the importance of considering order value
+and category composition when evaluating changes in revenue.
+
+Based on these findings, the key areas requiring continued business attention are maintaining
+availability of high-performing products and markets, managing categories according to their
+sales characteristics, monitoring longer delivery times, strengthening repeat purchasing, and
+evaluating sales through both order volume and order value.
+
+The accompanying Power BI dashboard provides an interactive view of these measures, allowing
+users to monitor performance across products, states, customers, delivery periods, and payment
+behavior. The dashboard can therefore be used alongside this report to review current patterns,
+investigate areas requiring attention, and support operational decision-making based on the analyzed
+measures.
+
+Overall, the findings provide a data-backed basis for maintaining strong-performing areas,
+identifying operational risks, and directing further investigation toward areas with measurable
+differences in performance.</div>
+            </div>
+
+        </section>
+
+
+        <div class="action-buttons bottom-buttons">
+
+            <a href="https://github.com/NikhilShah15/nikhil-portfolio/blob/main/assets/projects/olist/Reports/Olist_Ecommerce_Analysis_Report.pdf"
+               target="_blank"
+               class="btn primary">
+                Business Report
+            </a>
+
+            <a href="https://github.com/NikhilShah15/nikhil-portfolio/blob/main/assets/projects/olist/Python/Olist_Ecommerce_Analysis.ipynb"
+               target="_blank"
+               class="btn secondary">
+                Python Analysis
+            </a>
+
+            <a href="https://github.com/NikhilShah15/nikhil-portfolio/blob/main/assets/projects/olist/SQL/Olist_Ecommerce_Analysis.sql"
+               target="_blank"
+               class="btn secondary">
+                SQL Analysis
+            </a>
+
+            <a href="https://drive.google.com/file/d/1MKdVmuZ5XEdy-tEu9iVuPNwPeUfFf9N1/view?usp=sharing"
+               target="_blank"
+               class="btn secondary">
+                Power BI Dashboard
+            </a>
+
+            <a href="https://github.com/NikhilShah15/nikhil-portfolio/tree/main/assets/projects/olist/Reports"
+               target="_blank"
+               class="btn secondary">
+                Technical Summary
+            </a>
+
+        </div>
 
     </main>
 
-
-    <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <h3>Nikhil Ashish Shah</h3>
 
-        <p>
-            Data Analytics • Python • SQL • Power BI
-        </p>
+        <p>Data Analytics • Python • SQL • Power BI</p>
 
-        <p>
-            © 2026 All Rights Reserved
-        </p>
+        <p>© 2026 All Rights Reserved</p>
 
     </footer>
 
